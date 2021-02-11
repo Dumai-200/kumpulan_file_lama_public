@@ -9,6 +9,80 @@ k='\033[1;33m'
 p='\033[1;37m'
 h='\033[1;90m'
 
+def bahan2():
+
+	kata("Ok Lanjut... MengIntall...")
+	os.system("""
+pkg update -y
+pkg upgrade -y
+pkg install git -y
+npm cache clear
+npm audit fix
+""")
+
+
+
+def bot():
+
+	os.system("clear")
+	kata2(f"""
+		{c}[{k}VERSION {k}1.12{c}]
+{m}[•]======================================[•]
+{h}[•]01[•]~BabyBot	[ New ]		 [•]
+{p}[•]02[•]~AnKer		[ New ]		 [•]
+{h}[•]03[•]~AhfisJunianto  [ New ]		 [•]
+{p}[•]04[•]~Segera Hadir.. [ New ] 	 [•]
+{h}[•]05[•]~Segera Hadir.. [ New ]		 [•]
+{m}[•]======================================[•]
+
+{m}[•]======================================[•]
+{c}		|BY MR.RISKY|
+{m}[•]======================================[•]
+""")
+
+	kata(f"{c}Silahkan Pilih Bot Whatsapp Mau DiInstall.???")
+	os.system("sleep 2")
+	kon=input(f"{c}[•]{m}==={c}[•]{m}====={k}>>> {m}")
+	if kon == "":
+		kata(f"{m}Error...??? Anjinh...")
+		os.system("sleep 2")
+		bot()
+
+	elif kon == "1":
+		load()
+		bahan2()
+		os.system("""
+pkg install git
+https://github.com/Ramlan666/babybot
+cd babybot
+bash install.sh
+node index.js
+""")
+	elif kon == "2":
+		load()
+		bahan2()
+		os.system("""
+git clone https://github.com/4NK3R-PRODUCT1ON/bot-wea-v2
+cd bot-wea-v2
+bash install.sh
+node index.js
+""")
+	elif kon == "3":
+		load()
+		bahan2()
+		os.system("""
+git clone https://github.com/affisjunianto/botwasapv4
+cd botwasapv4
+bash install.sh
+node index.js
+""")
+
+	else:
+		kata(f"{m}Filed...Error..!!!")
+		os.system("sleep 2")
+		bot()
+
+
 def load():
     for x in range(0,101):
         time.sleep(1./10)
@@ -261,6 +335,86 @@ cd Gemail-Hack
 chmod +x gemailhack.py
 python gemailhack.py
 """)
+	elif xxx == "21":
+		load()
+		input(f"{c}Apakan Anda Yakin Mau Menginstall Bot~WhatsApp~ALL SERVER")
+		kata("Anda Telah Masuk... KeBot~~~")
+		os.system("sleep 2")
+		bot()
+
+	elif xxx == "22":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/anggaxd/cfbid
+cd cfbid
+python2 crack.py
+""")
+	elif xxx == "23":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/anggaxd/cfbid2
+cd cfbid2
+python2 run.py
+""")
+	elif xxx == "24":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Yayan-XD/MBF
+cd MBF
+bash setup.sh
+""")
+	elif xxx == "25":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Yayan-XD/Silent 
+cd Silent
+sh install.sh
+python2 Silent.py
+""")
+	elif xxx == "26":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Yayan-XD/B2
+cd B2
+pip2 install mechanize
+pip2 install requests
+python2 bb-hacker.py
+""")
+	elif xxx == "27":
+		load()
+		bahan()
+		os.system("""
+
+
+""")
+	elif xxx == "28":
+		load()
+		bahan()
+		os.system("""
+
+
+""")
+	elif xxx == "29":
+		load()
+		bahan()
+		os.system("""
+
+
+""")
+	elif xxx == "30":
+		load()
+		bahan()
+		os.system("""
+
+
+""")
+
+
 
 
 	elif xxx == "88":
@@ -270,8 +424,7 @@ python gemailhack.py
 
 	elif xxx == "99":
 		load()
-		bahan()
-		halo()
+		update()
 
 	elif xxx == "00":
 		os.system("xdg-open https://api.whatsapp.com/send/?phone=082384332714&text&app_absent=0")
@@ -285,7 +438,17 @@ python gemailhack.py
 		input(f"{m}Back~{p}Kembali")
 		halo()
 
+def update():
 
+	os.system("""
+clear
+cd $HOME
+clear
+rm -rf AllTools
+git clone https://github.com/Dumai-991/AllTools
+cd AllTools
+python Mulai.py
+""")
 
 
 

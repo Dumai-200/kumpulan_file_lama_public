@@ -103,7 +103,8 @@ def Wa():
 def baner():
     kata(f"""
                            {c}[ {k}AllTools {c}]
-                           {c}[ {k}Version{i} 1.10 {c}]
+                           {c}[ {k}Version{i} 1.12 {c}]
+			   {c}[ {k}Version{i} 20.1 {c}]
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]{m}
 {p}░█████╗░██╗░░░░░██╗░░░░░{h}████████╗░█████╗░░█████╗░██╗░░░░░░██████╗
 {p}██╔══██╗██║░░░░░██║░░░░░{h}╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██╔════╝
@@ -161,11 +162,12 @@ def menu():
 {p}[ 18 ]~Script Bajingan			[  00.6   ]
 {h}[ 19 ]~Script DmBf			[  12.1   ]
 {p}[ 20 ]~Script Hack Gmail		[  12.9   ]
-{m}[ 21 ]~Segera Hadir....			[  ????   ]
-{m}[ 22 ]~Segera Hadir....			[  ????   ]
-{m}[ 23 ]~Segera Hadir....			[  ????   ]
-{m}[ 24 ]~Segera Hadir....			[  ????   ]
-{m}[ 25 ]~Segera Hadir....			[  ????   ]
+{h}[ 21 ]~Script Bot~WhatsApp~New		[  ????   ]
+{p}[ 22 ]~Script CFBID			[  12.0   ]
+{h}[ 23 ]~Script CFBID2			[  13.1   ]
+{p}[ 24 ]~Script MBF 			[  12.1   ]
+{h}[ 25 ]~Script B2			[  19.9   ]
+{p}[ 26 ]~Script Silet			[  23.0   ]
 {h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]
 {p}[ 88 ]~Report Bug Script		[  Admin  ]
 {h}[ 99 ]~Update Script			[  Wajib  ]
