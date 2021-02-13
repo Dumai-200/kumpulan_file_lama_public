@@ -80,6 +80,23 @@ cd $HOME
 clear
 """)
 
+def welcome():
+
+	kata3(f"""
+{p}Assalamulaikum... Buat Kaum Islam...
+{p}Salom Buat...  Kaum Kristen...
+
+{c}Selamat Datang DiTools Ini... Tools Ini 100% Work...
+Dan Tools Ini.. Akan Bertambah Setiap Kali... Anda MengUpdate...
+Admin Sudah Menyiapkan Pilihan Update.. Pada Nomor [ 99 ]...
+Jika Ada Masalah Terhadap Tools.. Silahkan Report Bug....
+
+{k}~~~~~~~{i}Mr.Risky
+{k}~~~~~~~{i}082384332714
+""")
+	os.system("sleep 3;clear")
+
+
 def clear():
     os.system("sleep 1;clear;reset")
 
@@ -87,12 +104,17 @@ def kata(s):
     for c in s + "\n":
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(1./50)
+        time.sleep(1./80)
 def kata2(s):
     for c in s + "\n":
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(1./101)
+def kata3(s):
+    for c in s + "\n":
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(1./30)
 def load():
     for x in range(0,101):
         time.sleep(1./10)
@@ -102,9 +124,10 @@ def Wa():
        sys.exit("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mExit\033[1;97m")
 def baner():
     kata(f"""
-                           {c}[ {k}AllTools {c}]
-                           {c}[ {k}Version{i} 1.12 {c}]
-			   {c}[ {k}Version{i} 20.1 {c}]
+			   {c}[ VERSION  ] == [ 1.12 ] TO
+			   {c}[ VERSION  ] == [ 20.1 ] TO
+			   {c}[ VERSION  ] == [ 23.9 ]
+			   {c}[ ALLTOOLS ]
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]{m}
 {p}░█████╗░██╗░░░░░██╗░░░░░{h}████████╗░█████╗░░█████╗░██╗░░░░░░██████╗
 {p}██╔══██╗██║░░░░░██║░░░░░{h}╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██╔════╝
@@ -122,11 +145,11 @@ def baner():
 
 def Add():
 
-	os.system("mkdir Data")
+	os.system("mkdir Config")
 
 def Hapus():
 
-	os.system("rm -rf Data")
+	os.system("rm -rf Config")
 
 def git():
 
@@ -139,7 +162,6 @@ clear
 def menu():
 
 	kata2(f"""
-
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]
 {m}[ NO ]~~~~~~[ NAME SCRIPT ]~~~~~~~~~~~~~[ VERSION ]~~~~~~~~~
 {h}[ 01 ]~Script Dark Fb                   [  12.1   ]
@@ -168,15 +190,38 @@ def menu():
 {p}[ 24 ]~Script MBF 			[  12.1   ]
 {h}[ 25 ]~Script B2			[  19.9   ]
 {p}[ 26 ]~Script Silet			[  23.0   ]
+{h}[ 27 ]~Script Hack CCTV			[  19.0   ]
+{p}[ 28 ]~Script Virus Hp			[  6.12   ]
+{h}[ 29 ]~Script Cek Ip Me			[  15.5   ]
+{p}[ 30 ]~Script BotChat			[  4.0    ]
+{h}[ 31 ]~Script Scan IP Web		[  2.0    ]
+{p}[ 32 ]~Script EncPytHon			[  22.0   ]
+{h}[ 33 ]~Script Lacak IP			[  12.0   ]
+{p}[ 34 ]~Script MrTamfanSpam		[  19.9   ]
+{h}[ 35 ]~Script Prem     			[  12.1   ]
+{p}[ 36 ]~Script Treker Fb			[  11.1   ]
+{h}[ 37 ]~Script Hack IG			[  0.00   ]
+{p}[ 38 ]~Script DarkFB New		[  0.00   ]
+{h}[ 39 ]~Script BRUTEFERONCEnew		[  0.00   ]
+{p}[ 40 ]~Script LiteSpam			[  0.00   ]
 {h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]
 {p}[ 88 ]~Report Bug Script		[  Admin  ]
 {h}[ 99 ]~Update Script			[  Wajib  ]
 {p}[ 00 ]~Exit				[  Babi   ]
-{h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]
+{h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]"""),;kata3(f"""
 {k}Script Ini Akan Error Saat Admin Mau MengUpdate..
-{b}Atau Menambah Script Atau Tools...
+{c}Atau Menambah Script Atau Tools...
+{k}Wajib Install Bahan Dulu Bro... Kolo Tidak Diakan Rusak...
+{c}TOOLS INI 100% WORK... Pilih ,[ 88 ] Untuk Report Bugs Atau..
+{k}Terjadi Kesalahan Terhadap Script...
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]
 """)
+#[ 30 ]~Script 			[     ]
+#???
+#???
+#???
+
+
 def main():
      Add()
      clear()
@@ -186,7 +231,7 @@ def main():
 
 
 
-
-git()
+welcome()
 Hapus()
+git()
 main()
