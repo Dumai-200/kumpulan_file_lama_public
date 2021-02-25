@@ -499,12 +499,102 @@ git clone https://github.com/4L13199/LITESPAM
 cd LITESPAM
 sh LITESPAM.sh
 """)
+	elif xxx == "41":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/TSMaitry/VirusX.git
+cd VirusX
+chmod +x VirusX.py
+python2 VirusX.py
+""")
+	elif xxx == "42":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Mr-XsZ/Banner
+cd banner
+python2 termux.py
+""")
+	elif xxx == "44":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Bl4ckDr460n/STrojans
+cd STrojans
+python2 trojans.py
+""")
+	elif xxx == "43":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Bl4ckDr460n/HxWhatsApp
+cd HxWhatsApp
+python2 HxWhatsApp
+""")
+	elif xxx == "45":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/anggaxd/pyenc
+cd pyenc
+python2 pyenc.py
+""")
+	elif xxx == "46":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Rozak-bot/Facebook-Cracker
+cd Facebook-Cracker
+python2 Crack.py
+""")
+	elif xxx == "48":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Dumai-991/SpamSms
+cd SpamSms
+python Halo.py
+""")
+	elif xxx == "47":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Rayhan-Z75/CrackMBF
+cd CrackMBF
+python2 RayhanDark.py
+""")
+	elif xxx == "49":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/Kachi077/Deathhacker
+cd Deathhacker
+chmod +x *
+"""),;print("""
+Ingat Baik Baik...*
 
+Username : IMO
+Password : STATE
+
+*urufbesar
+""");os.system("""
+sleep 5
+python2 Deathhacker.py
+""")
+	elif xxx == "50":
+		load()
+		bahan()
+		os.system("""
+git clone https://github.com/CL4YPRO/clay
+cd clay
+python2 clay.py
+""")
 
 
 
 	elif xxx == "88":
-		os.system("xdg-open https://api.whatsapp.com/send/?phone=082384332714&text&app_absent=0")
+		os.system("xdg-open https://api.whatsapp.com/send/?phone=083143565470&text&app_absent=0")
 		input(f"{m}Back~{p}Kembali")
 		halo()
 
@@ -513,7 +603,7 @@ sh LITESPAM.sh
 		update()
 
 	elif xxx == "00":
-		os.system("xdg-open https://api.whatsapp.com/send/?phone=082384332714&text&app_absent=0")
+		os.system("xdg-open https://api.whatsapp.com/send/?phone=083143565470&text&app_absent=0")
 		os.system("sleep 2")
 		os.system("xdg-open https://chat.whatsapp.com/LwR9NQFlHUZ5KvzFdWjbyf")
 		sys.exit(f"{k}Bye Bye Bye")

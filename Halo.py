@@ -9,6 +9,17 @@ k='\033[1;33m'
 p='\033[1;37m'
 h='\033[1;90m'
 
+def git():
+
+	os.system("""
+open-xdg https://m.facebook.com/risky.solihin.18
+clear
+git clone https://github.com/Dumai-200/Config
+clear
+""")
+
+
+
 
 def halo():
 
@@ -47,6 +58,38 @@ def halo():
 		kata(f"{m}Soryy..... {p}Error.....")
 		os.system("sleep 2")
 		halo()
+
+def enter():
+
+	load()
+	kata2(f"{k}Tekan Enter Untuk Lanjut...{m}KONTOL...")
+	os.system("sleep 2")
+	print("")
+	input(f"{c}[{p} Next {k}>><<{p} Lanjut {c}]")
+
+def b():
+
+	os.system("clear")
+
+def load():
+        try:
+                a = 50
+                b = 0
+                for c in range(a):
+                        a -= 1
+                        b += 1
+                        sys.stdout.write(f"\r {i}Download {k}[{p}%s{h}%s{k}]{i} %s/%s"%("⋙"*b,"≡"*a,b,a)),;sys.stdout.flush()
+                        time.sleep(0.3)
+        except KeyboardInterrupt:
+                sys.exit()
+
+def load3():
+
+	text = [f"{i}[>>>>             ] 35%","[>>>>>>>>>        ] 46%","[>>>>>>>>>>>>     ] 96%","[>>>>>>>>>>>>>>>>>] 100%"]
+	for o in text + "\r":
+		print("\r\033[1;91m[●] \033[1;92mLoading \033[1;97m"+o+"\r"),;sys.stdout.flush();time.sleep(1)
+#	        print(f"\r\033[1;97m[\033[1;96m!\033[1;97m]Loading...(\033[1;92m"+o+"\033[90m%\033[1;97m)", time.sleep("10") , end="", flush=False)
+
 def bahan():
 
 	clear()
@@ -92,7 +135,7 @@ Admin Sudah Menyiapkan Pilihan Update.. Pada Nomor [ 99 ]...
 Jika Ada Masalah Terhadap Tools.. Silahkan Report Bug....
 
 {k}~~~~~~~{i}Mr.Risky
-{k}~~~~~~~{i}082384332714
+{k}~~~~~~~{i}083143565470
 """)
 	os.system("sleep 3;clear")
 
@@ -115,48 +158,35 @@ def kata3(s):
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(1./30)
-def load():
+def load2():
     for x in range(0,101):
         time.sleep(1./10)
         print(f"\r\033[1;97m[\033[1;96m!\033[1;97m]Loading...(\033[1;92m{x}\033[90m%\033[1;97m)", end="", flush=True)
 def Wa():
-       os.system("xdg-open https://api.whatsapp.com/send/?phone=%2B6282384332714&text&app_absent=0")
+       os.system("xdg-open https://api.whatsapp.com/send/?phone=%2B6283143565470&text&app_absent=0")
        sys.exit("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mExit\033[1;97m")
 def baner():
     kata(f"""
-			   {c}[ VERSION  ] == [ 1.12 ] TO
-			   {c}[ VERSION  ] == [ 20.1 ] TO
-			   {c}[ VERSION  ] == [ 23.9 ]
-			   {c}[ ALLTOOLS ]
+{c}[ {i}VERSION {c}]{m}~~~{c}[  {i}INFO{c}  ]
+{c}[  {k}1.12   {c}]{m}~~~{c}[ {k}Pindah{c} ]
+{c}[  {k}20.1   {c}]{m}~~~{c}[ {k}Pindah{c} ]
+{c}[  {k}23.9   {c}]{m}~~~{c}[ {k}Pindah{c} ]
+{c}[  {k}26.8   {c}]{m}~~~{c}[  {m}End{c}   ]
+{c}[  {k}????   {c}]{m}~~~{c}[ {m}??????{c} ]
+
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]{m}
-{p}░█████╗░██╗░░░░░██╗░░░░░{h}████████╗░█████╗░░█████╗░██╗░░░░░░██████╗
-{p}██╔══██╗██║░░░░░██║░░░░░{h}╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██╔════╝
-{p}███████║██║░░░░░██║░░░░░{h}░░░██║░░░██║░░██║██║░░██║██║░░░░░╚█████╗░
-{p}██╔══██║██║░░░░░██║░░░░░{h}░░░██║░░░██║░░██║██║░░██║██║░░░░░░╚═══██╗
-{p}██║░░██║███████╗███████╗{h}░░░██║░░░╚█████╔╝╚█████╔╝███████╗██████╔╝
-{p}╚═╝░░╚═╝╚══════╝╚══════╝{h}░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝╚═════╝░
+{h}░█████╗░██╗░░░░░██╗░░░░░{p}████████╗░█████╗░░█████╗░██╗░░░░░░██████╗
+{h}██╔══██╗██║░░░░░██║░░░░░{p}╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██╔════╝
+{h}███████║██║░░░░░██║░░░░░{p}░░░██║░░░██║░░██║██║░░██║██║░░░░░╚█████╗░
+{h}██╔══██║██║░░░░░██║░░░░░{p}░░░██║░░░██║░░██║██║░░██║██║░░░░░░╚═══██╗
+{h}██║░░██║███████╗███████╗{p}░░░██║░░░╚█████╔╝╚█████╔╝███████╗██████╔╝
+{h}╚═╝░░╚═╝╚══════╝╚══════╝{p}░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝╚═════╝░
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]
 [{k}•{c}]{h}Script By         : {c}Mr.Risky
 [{k}•{c}]{h}Github            : {c}github.com/Dumai-991
-[{k}•{c}]{h}WhatSapp          : {c}082384332714
+[{k}•{c}]{h}WhatSapp          : {c}083143565470
 [{k}•{c}]{h}Status            : {c}Work / BerKerja
 {c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]{m}
-""")
-
-def Add():
-
-	os.system("mkdir Config")
-
-def Hapus():
-
-	os.system("rm -rf Config")
-
-def git():
-
-	os.system("""
-clear
-git clone https://github.com/Dumai-200/Config
-clear
 """)
 
 def menu():
@@ -204,34 +234,43 @@ def menu():
 {p}[ 38 ]~Script DarkFB New		[  0.00   ]
 {h}[ 39 ]~Script BRUTEFERONCEnew		[  0.00   ]
 {p}[ 40 ]~Script LiteSpam			[  0.00   ]
+{h}[ 41 ]~Script VirusAll			[  34.6   ]
+{p}[ 42 ]~Script Mempercatikan Termux	[  20.9   ]
+{h}[ 43 ]~Script HxWhatsapp		[  00.0   ]
+{p}[ 44 ]~Script Trojans			[  10.1   ]
+{h}[ 45 ]~Script Dompile (Enc) 		[  12.1   ]
+{p}[ 46 ]~Script Cracker 			[  23.0   ]
+{h}[ 47 ]~Script DarkFb			[  00.0   ]
+{p}[ 48 ]~Script SpamSMS			[  00.0   ]
+{h}[ 49 ]~Script DeathHacker :V		[  10.5   ]
+{p}[ 50 ]~Script CLAY (Hasil Recode)	[  19.1   ]
 {h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]
 {p}[ 88 ]~Report Bug Script		[  Admin  ]
 {h}[ 99 ]~Update Script			[  Wajib  ]
 {p}[ 00 ]~Exit				[  Babi   ]
-{h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]"""),;kata3(f"""
+{h}[ -- ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[  ----   ]
+{c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]
+"""),;kata3(f"""
 {k}Script Ini Akan Error Saat Admin Mau MengUpdate..
 {c}Atau Menambah Script Atau Tools...
 {k}Wajib Install Bahan Dulu Bro... Kolo Tidak Diakan Rusak...
 {c}TOOLS INI 100% WORK... Pilih ,[ 88 ] Untuk Report Bugs Atau..
 {k}Terjadi Kesalahan Terhadap Script...
-{c}[{k}•{c}]{i}========================================================={c}[{k}•{c}]
 """)
-#[ 30 ]~Script 			[     ]
+#{}[ 30 ]~Script 			[     ]
 #???
 #???
 #???
 
 
 def main():
-     Add()
      clear()
      baner()
      menu()
      os.system("cd Config/Data;python Config.py")
 
 
-
-welcome()
-Hapus()
+b()
+load()
 git()
 main()
