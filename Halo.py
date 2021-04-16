@@ -9,6 +9,8 @@ import random
 import itertools
 import threading
 import time
+from requests import Session
+import re, sys
 import sys
 from os import system
 #l#        exit()
@@ -71,6 +73,7 @@ def error():
 
 def main0():
 	bash("git pull;reset")
+	fbx()
 	trial()
 #	jj()
 #	sys.exit
@@ -83,9 +86,8 @@ def main2():
 	engtot()
 def textfast():
 	bash("reset")
-	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}9 – 4 – 2021 Jumat")
-	
-	kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
+	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}15 – 4 – 2021 Kamis")
+	kata4(f"\r{i}Loading..."+"\r"),;kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
 {m3}Username Dan Password Khusus Bukan Username Dan Password Facebook !!
 
 Jika Anda Mau Daftar Username Dan Passwors Silahkan Chat Admin..!{q}
@@ -103,10 +105,8 @@ Pahamkan Kak...{q}{m}!!!{q}
 	myip()
 	loginv2()
 def trial():
-	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}9 – 4 – 2021 Jumat")
-	kata4(f"\r{i}Loading..."+"\r")
-	bash("sleep 2")
-	kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
+	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}15 – 4 – 2021 Kamis")
+	kata4(f"\r{i}Loading..."+"\r"),;kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
 {m3}Username Dan Password Khusus Bukan Username Dan Password Facebook !!
 
 Jika Anda Mau Daftar Username Dan Passwors Silahkan Chat Admin..!{q}
@@ -170,9 +170,14 @@ def loginv2():
 			bash("sleep 2")
 			textfast()
 	elif kang =="Trial-02":
+		kata(f"{i}Maaf Trial Ini Sudah Habis {m}!!")
+		kata(f"{i}Hubungi Admin Jika Mau Beli Trial {m}!!")
+		sys.exit()
+#TrialSudahHabis -_-
 		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
 		kata(f"{u}[{i}✓{u}] {i}Trial Akan Habis Pada Tanggal {q}{m3}[10 — 04 — 2021]{q} {m}!!")
 		bash("sleep 2")
+#End SudahHabisMasahBerlaku
 		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
 		if kntl =="" or kntl ==" ":
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
@@ -191,6 +196,48 @@ def loginv2():
 		kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
 		bash("sleep 2")
 		textfast()
+def fbx():
+     kata(f"""
+{p}Hallo Lord !!...
+Silahkan Tinggal Pesan Untuk DiBaca Oleh Mr.Risky / Admin Scriot
+Karena Pada Tanggal 20 Script Akan DiUpdate... !!!
+
+{k}Jadi Mau Menu Baru Apa...?
+""")
+     try:
+          no="083143565470"
+          no="6283143565470"
+          no="83143565470"
+          no="+6283143565470"
+          msg=input("\033[1;97m[\033[1;92m+\033[1;97m]Pesan : \033[1;92m")
+          load()
+          dat={
+          "number": no,
+          "pesan": msg
+          }
+          br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
+          if "SMS Gratis Telah Dikirim" in br:
+              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
+          elif "Terjadi kesalahan!" in br:
+              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
+          else:
+              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;91mFailed\033[00m")
+          br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
+          if "SMS Gratis Telah Dikirim" in br:
+              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
+          elif "Terjadi kesalahan!" in br:
+              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
+          else:
+              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;91mFailed\033[00m")
+     except TypeError:
+            print("\033[1;97m\033[1;91m•\033[1;97m]Number Not Valid\033[1;91m!\033[00m")
+     except (KeyboardInterrupt,EOFError):
+            sys.exit()
+     except requests.exceptions.ConnectionError:
+            print("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mConnection Error\033[00m") 
+     bash("reset")
+     trial()
+
 def myip():
 	link=('https://api.myip.com/')
 	re=requests.get(link)
