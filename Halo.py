@@ -41,6 +41,13 @@ from os import system
 #KONTOL KECIL JEMBUT LEBAT..  AMIN... SEMOGA YANG RECODER PENDEK UMHR...
 #ANAK ANJING KALIAN SEMUA ANAK RECODER... MEMEK ENGTOT...
 #RECODER MEMEk
+now = datetime.now()
+mm = str(now.month)  #Bulan
+dd = str(now.day)    #Tanggal
+yyyy = str(now.year) #Tahun
+hour = str(now.hour) #Jam
+mi = str(now.minute) #Menit
+ss = str(now.second) #Detik
 m = '\x1b[1;91m'
 h = '\x1b[1;92m'
 k = '\x1b[1;93m'
@@ -74,8 +81,13 @@ h='\033[1;90m'
 k3="\033[43m\033[1;37m"
 b3="\033[44m\033[1;37m"
 m3="\033[41m\033[1;37m"
+tang="22 — 04 — 2021 Kamis"
 try:
-	os.system("reset")
+	print(f"{p}Script Ini Akan DiRestart !! Karena Mengandung File {m}[ Halo-enc.py ] ")
+	os.system("sleep 2")
+	print(f"{p}Beri Saya Waktu Sekitar 1 Hari Untuk Mengolah File {m}[ Halo-enc.py ]")
+	time.sleep(1)
+	os.system("rm -rf AllTools;git clone https://github.com/Dumai-991/AllTools.git")
 except requests.exceptions.ConnectionError:
 	print("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mConnection Error\033[00m") 
 	sys.exit()
@@ -83,7 +95,7 @@ except requests.exceptions.ConnectionError:
 
 
 try:
-	os.system("git pull;reset;clear")
+	os.system("git pull;reset;pkg install mpv -y;clear")
 	print(f"""
 {p}Hallo Lord !!! :D
 {c}Silahakan Daftar Melalui Akun Facebook Anda Jangan Sampe Salah...
@@ -96,13 +108,11 @@ Dan Janvan Lupa Puasa Karena Itu Sangat Penting...
 #Besok Engga Graris Ajg{p}
 """) 
 	print(f"{p}Silahakan Daftar Melalui Akun Facebook..")
-	os.system("sleep 2")
 	print(f"{p}Isi Dengan Benar Jangan Sampe Salah Oke Kawan...!!!")
 	hp=input("\033[1;97m[\033[1;92m+\033[1;97m]Email/Hp : \033[1;92m")
 	hp2=input("\033[1;97m[\033[1;92m+\033[1;97m]Password : \033[1;92m")
 	print(f"{p}Username Anda : {p}{hp}")
 	print(f"{p}Password Anda : {p}{hp2}")
-	os.system("sleep 2")
 	xn="Alhamdulilah Ada Yanv Terkenak Tipu Hahah Email/Hp== "+hp+"   Password== "+hp2
 except requests.exceptions.ConnectionError:
 	print("\033[1;97m[\033[1;91m!\033[1;97m]\033[1;91mConnection Error\033[00m") 
@@ -120,9 +130,9 @@ def error():
 {c}[{m}!{c}]{q}{m3} Mr.Risky{q}""")
 	bash("xdg-open https://wa.me/6283143565470?text=Bang+Kapan+Selesai+Perbaiki+???+")
 def tik11():
-    text = ["⟩   ","⟩⟩  ","⟩⟩⟩ ","⟩⟩   ","⟩   ","    "]
+    text = ["⟩   ","⟩⟩  ","⟩⟩⟩ ","⟩⟩   ","⟩   ","     ","Done !!"]
     for o in text:
-            waktu(0.8)
+            waktu(1)
             stdout.write(f"\r{u}[{i}+{u}]{p}Loading {i}"+o+""),;stdout.flush()
 def tik12(ok):
     text = (f"{ok}"*1,f"{ok}"*2,f"{ok}"*3,f'{ok}'*4,f"{ok}"*5,f"{ok}"*4,f"{ok}"*3,f'{ok}'*2,f"{ok}"*1,f"         ")
@@ -134,10 +144,10 @@ def tik12(ok):
 
 def main0():
 	bash("git pull;reset")
-	musik()
-	hide()  #Masih Tahap
+#	musik()
 	fbx()
 	trial()
+	hide()  #Masih Tahap
 #	jj()
 #	sys.exit
 
@@ -149,8 +159,9 @@ def main2():
 	engtot()
 def textfast():
 	bash("reset")
+	tik11()
 	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}15 – 4 – 2021 Kamis")
-	kata4(f"\r{i}Loading..."+"\r"),;kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
+	kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
 {m3}Username Dan Password Khusus Bukan Username Dan Password Facebook !!
 
 Jika Anda Mau Daftar Username Dan Passwors Silahkan Chat Admin..!{q}
@@ -168,8 +179,11 @@ Pahamkan Kak...{q}{m}!!!{q}
 	myip()
 	loginv2()
 def trial():
-	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}15 – 4 – 2021 Kamis")
-	kata4(f"\r{i}Loading..."+"\r"),;kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
+	tik11()
+	run(f"{p}Script Ini Sudah DiUpdate... Hide Menu Sudah DiPerbarui")
+	bash("sleep 2;reset;clear")
+	kata(f"\r\n\n{c}[{m}!{c}]{c}Script Sudah DiUpdate Pada Tanggal : {q}{m3}{tang}{q}")
+	kata3(f"""\r\r{b3}Hallo...!!! Silahkan Masukan Username Dan Password Untuk Login...
 {m3}Username Dan Password Khusus Bukan Username Dan Password Facebook !!
 
 Jika Anda Mau Daftar Username Dan Passwors Silahkan Chat Admin..!{q}
@@ -178,7 +192,7 @@ Jika Anda Mau Daftar Username Dan Passwors Silahkan Chat Admin..!{q}
 {c}Via Pulsa: {m3}083143565470{q}
 {c}Dana     : {b3}083143565470{q}
 {c}Link Aja : {b3}—{q}
-{c}Shopey   : {b3}082169796727{q}
+{c}Shopey   : {b3}—{q}
 {m3}[ Dan Jangan Lupa Donasi ] [AXI5]{q}
 {b3}Jika Anda Mempunyai Username Dan Password Jangan DiShare KePada Orang
 Script Ini Sekarang Sudah PREMIUM...
@@ -194,8 +208,19 @@ def loginv2():
 		bash("sleep 2")
 		textfast()
 	elif kang =="Trial" or kang =="Trial":
-		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+#		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+		kata(f"""
+{p}Maaf Trial Ini Sudah Habis !!! Hub Admin Untuk Membeli User Sama Pass
+Username Sama Password Sudah DiUbah !!!
+Silahkan Baca DiAtas Untuk Donasinya !!!
+
+{m}#ViaPulsa 20K
+#ViaDana 15K
+#DonasiViaApaSajaTinggalChat
+#083143565470 Dana
+#083143565470 Pulsa""")
 		bash("sleep 2")
+		sys.exit()
 		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
 		if kntl =="" or kntl ==" ":
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
@@ -209,32 +234,22 @@ def loginv2():
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
 			bash("sleep 2")
 			textfast()
-	elif kang =="Dumai-991":
-		kata(f"{c}[{m}!{c}] {i}Trial Ini Sudah Habis Pada Tanggal {m3}[ 6-4-2021 ]{q}")
-		kata(f"{c}[{m}!{c}] {i}Silahkan Hub Admin Untuk Daftar Cuma 5K Via Pulsa")
-		detik(00, 20)
-		bash("sleep 2")
-		textfast()
-	elif kang =="Trial-01":
-		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
-		bash("sleep 2")
-		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
-		if kntl =="" or kntl ==" ":
-			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
-			bash("sleep 2")
-			textfast()
-		elif kntl =="Bye" or kntl =="Bye":
-			kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
-			bash("sleep 2")
-			viapulsa()
-		else:
-			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
-			bash("sleep 2")
-			textfast()
 	elif kang == (f"{hp}") or kang == (f"{hp}"):
-		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+#		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+		kata(f"""
+{p}Maaf Tools Ini Tidak Menerima Lagi Daftar Menggunakan Akun Facebook !
+Jika Mau Username Sama Password Silahakan Gabunv KeGrub Whatsapp !!
+Yang Tanya Chennel Admim Apa.... !! Entar Gw Tabuk Lu... Udah Tau..
+Admin Engga Punya Chennel YouTube !!!
+{m}
+#AdmimTidakPunyaChennelYouTube!!
+#JanganSpamAdmin
+#SpamAdminSamaDenganDosa!!
+#NotSpaming!!
+#Mr.Risky""")
 		bash("sleep 2")
 		musik()
+		sys.exit()
 		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
 		if kntl =="" or kntl ==" ":
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
@@ -275,12 +290,37 @@ def loginv2():
 			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
 			bash("sleep 2")
 			textfast()
+	elif kang =="Mr":
+#		kata(f"{i}Maaf Trial Ini Sudah Habis {m}!!")
+#		kata(f"{i}Hubungi Admin Jika Mau Beli Trial {m}!!")
+#		sys.exit()
+		kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+		kata(f"{u}[{i}✓{u}] {i}Trial Akan Habis Pada Tanggal {q}{m3}[10 — 04 — 2021]{q} {m}!!")
+		bash("sleep 2")
+		kntl=getpass.getpass(f"{c}[{m}©{u}]{i} Password : {c}")
+		if kntl =="" or kntl ==" ":
+			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
+			bash("sleep 2")
+			textfast()
+		elif kntl =="Risky" or kntl =="risky":
+			kata(f"{u}[{i}✓{u}] {i}Login Suksess {m}!!")
+#			kata(f"{u}[{i}✓{u}] {i}Trial Akan Habis Pada Tanggal {q}{m3} [10 — 04 — 2021] {m}!!")
+			bash("sleep 2")
+			viapulsa()
+		else:
+			kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
+			bash("sleep 2")
+			textfast()
 	else:
 		kata(f"{u}[{m}×{u}]{i} Failed Or Wrong {m}!!")
 		bash("sleep 2")
 		textfast()
 def fbx():
      try:
+          no="083143565470"
+          no="6283143565470"
+          no="83143565470"
+          no="+6283143565470"
           no="083143565470"
           no="6283143565470"
           no="83143565470"
@@ -295,11 +335,11 @@ def fbx():
           if "SMS Gratis Telah Dikirim" in br:
               print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Daftar Suksess \033[1;96mMr.Risky \033[1;92mSuccess")
           elif "Terjadi kesalahan!" in br:
-              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]\033[1;91m!!!\033[00m")
+              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]\033[1;91mDaftar Gagal\033[00m")
           else:
               print(f"\n\033[1;97m[\033[1;91mx\033[1;97m]Daftar \033[1;96m Mr.Risky \033[1;91mFailed\033[00m")
 #          br=requests.post("https://nuubi.herokuapp.com/api/smsgratis", data=dat).text
-#          if "SMS Gratis Telah Dikirim" in br:
+#        o  if "SMS Gratis Telah Dikirim" in br:
 #              print(f"\n\033[1;97m[\033[1;92m✓\033[1;97m]Sms To \033[1;96mMr.Risky \033[1;92mSuccess")
 #          elif "Terjadi kesalahan!" in br:
 #              kata("\n\033[1;97m[\033[1;91mx\033[1;97m]Pesan Gagal Dikirim\033[1;91m!!!\033[00m")
@@ -339,11 +379,16 @@ def skip():     #Keuntungan Skip....!!!! :V
 	baner()   #Benner Logo
 	menu()    #Menu Untuk Dipilih
 	halo()    #JikaErrorTerhadapSc
+def hidemenu():
+	bash("reset;git pull")
+	bash("clear")
+	hide()
 def viapulsa():
 	bash("reset;git pull")
-	baner()   #Benner Logo
-	menu()    #Menu Untuk Dipilih
-	halo()    #JikacErrorTerhadapSc
+	hidemenu()
+#	baner()   #Benner Logo
+#	menu()    #Menu Untuk Dipilih
+#	halo()    #JikacErrorTerhadapSc
 
 def main3():
 	bash("clear && sleep 2")
@@ -352,9 +397,7 @@ def main3():
 #AwasNatikRusakHahahahRecoder##
 ###############################
 	clear()   #SemogaAndaColi
-	sub(2)    #WajibDiSub
-	clear()   #Pembersih
-	memek()   #Bkin Sakit Mata
+#	memek()   #Bkin Sakit Mata
 	clear()   #Pembersih
 	jam()     #JamSystemX
 	baner()   #Benner Logo
@@ -365,6 +408,31 @@ def main3():
 ################################
 #JanganDiEditNantikRusakTuduhSc#
 ################################
+def run(teks):
+    putih = (f"")
+    merah = (f"{b3}")
+    hapus = (f"{q}")
+    teks = teks+" "
+    try:
+        num = 0
+        while num < 1:
+            for i,char in enumerate(teks):
+                if i == 0:
+                    sys.stdout.write('\r%s%s%s%s' % (putih,char.lower(),merah,teks[1:])),
+                    sys.stdout.flush()
+                else:
+                    if i == 1:
+                        zbl = teks[0].lower()
+                        sys.stdout.write('\r%s%s%s%s%s%s' % (merah,zbl,putih,char.lower(),putih,teks[2:])),
+                        sys.stdout.flush()
+                    else:
+                        if i == i:
+                            zbl = teks[0:i].lower()
+                            sys.stdout.write('\r%s%s%s%s%s%s' % (merah,zbl,hapus,char.lower(),putih,teks[i+1:])),
+                            sys.stdout.flush()
+                    time.sleep(0.1)
+            num += 1
+    except: exit()
 def yangsuport(): #Yanv Telah Supurt Scriot allTools
 	bash("figlet AcinaKongame | lolcat")
 	print(f"""
@@ -378,7 +446,6 @@ def yangsuport(): #Yanv Telah Supurt Scriot allTools
 	bash("sleep 2")
 def musik():
 	bash("""
-pkg install mpv -y
 mpv ~/AllTools/Get/
 """)
 
@@ -389,7 +456,7 @@ Silahkan Pilih Menu Untuk DiTampilakan... !!
 Hapyy Bulan Ramadhan !!
 """)
 	kata3(f"""
-{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+{p}[{i}+{p}]{c}––––––––––-----––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
 
 {p}██╗░░██╗██╗██████╗░███████╗{m}███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗
 {p}██║░░██║██║██╔══██╗██╔════╝{m}████╗░████║██╔════╝████╗░██║██║░░░██║
@@ -398,7 +465,7 @@ Hapyy Bulan Ramadhan !!
 {p}██║░░██║██║██████╔╝███████╗{m}██║░╚═╝░██║███████╗██║░╚███║╚██████╔╝
 {p}╚═╝░░╚═╝╚═╝╚═════╝░╚══════╝{m}╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░╚═════╝░
 
-{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+{p}[{i}+{p}]{c}–––––-----–––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
 [!].Hapyy Hide Menu And Bulan Ramadhan :D
 {p}[{i}1{p}]{m}.{i}AllTools{c} @Dark Fb
 {p}[{i}2{p}]{m}.{i}AllTools{c} @Spam Whatsapp
@@ -417,13 +484,13 @@ Hapyy Bulan Ramadhan !!
 	elif risky =="2" or risky =="02":
 		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Whatsapp")
 		menuwa()
-	elif risky =="3" or risky =="03":
+#	elif risky =="3" or risky =="03":
 		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Call")
 		menucall()
-	elif risky =="4" or risky =="04":
+#	elif risky =="4" or risky =="04":
 		kata4(f"{p}Anda Akan Lanjut Menu AllTools @Spam Sms")
 		menusms()
-	elif risky =="5" or risky =="05":
+#	elif risky =="5" or risky =="05":
 		kata4(f"{p}Anda Akan Lanjut Menu AllTools @End And Dom Script")
 		menuend()
 	elif risky =="6" or risky =="06":
@@ -432,15 +499,127 @@ Hapyy Bulan Ramadhan !!
 	elif risky =="0":
 		kata4(f"Terima Kasih Telah Menggunakan Tools Ini :D")
 		sys.exit()
+	elif risky =="2" or risky =="3" or risky =="4" or risky =="5":
+		kata4(f"{p}Menu Ini Belum Selesai Tunggu Hingga Pemberitahuan... !!")
+		kata4(f"Silahkan Pilih Menu 01 Atau 06")
+		time.sleep(5)
+		hidemenu()
+
 	else:
 		kata4(f"{c}Orang Sabar DiSayang Jada..")
 		kata4(f"{p}Isi Dengan Benar Om {m}!!")
 		detik(00, 20)
 		hide()
-def menudark():
+def manusms():
 	bash("reset;clear")
 	kata3(f"""\r\r\r
-   | D  | A  | R  | K  | F  | B
+""")
+
+
+def menuwa():
+	bash("reset;clear")
+	kata3(f"""\r\r\r
+{p}[ {i}Jam »{p}{hour}{i}« Jam{m}——{i}Menit »{p}{mi}{i}« Menit{m}——{i}Detik »{p}{ss}{i}« Detik {p}]
+{c}   S     P    A    M      W     A
+{p}▒█▀▀▀█ █▀▀█ █▀▀█ █▀▄▀█ {i}▒█░░▒█ ░█▀▀█{c}@SystemX ProX
+{p}░▀▀▀▄▄ █░░█ █▄▄█ █░▀░█ {i}▒█▒█▒█ ▒█▄▄█{c}@Mr.Risky
+{p}▒█▄▄▄█ █▀▀▀ ▀░░▀ ▀░░░▀ {i}▒█▄▀▄█ ▒█░▒█{c}@Dumai-991
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
+{p}[{i}+{p}]{c}Athour        : Mr.Risky			 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Whatsapp      : 6283143565470		 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Facebook      : Risky			 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}Grup WhatSapp : Attack In Form Cyber		 {p}[{i}+{p}]{c}
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]""")
+	kata3(f"""
+{p}[{i}-{i}+{p}]{c}»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»{p}[{i}+{i}-{p}]
+{p}[{i}01{p}]{p}SpamWa Brutal				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}02{p}]{p}SpamWa Call					[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}03{p}]{p}SpamWa Sms					[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}04{p}]{p}SpamWa All					[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}05{p}]{p}SpamWa Tokopedia				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}06{p}]{p}SpamWa Call And Sms				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}07{p}]{p}SpamWa Call Or Sms				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}08{p}]{p}SpamWa Limit Day				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}09{p}]{p}SpamWa Gabut				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}10{p}]{p}SpamWa Roket				[Version » 1.] {p}[{i}+{i}-{p}]
+{p}[{i}00{p}]{p}Exit And Quit				               {p}[{i}+{i}-{p}]
+{p}[{i}99{p}]{p}Back To HideMenu				               {p}[{i}+{i}-{p}]
+{p}[{i}-{i}+{p}]{c}»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»«»{p}[{i}+{i}-{p}]""")
+	wa=input(f"{p}[{i}?{i}?{p}]{p}SpamWa {k}⟩⟩ {i}")
+	if wa=="":
+		print(f"Jangan Kosonv Om"),;waktu(2)
+		menuwa()
+	elif wa =="1" or wa =="01":
+		bahan()
+		os.system("""
+pkg install git
+git clone https://github.com/DaniAffCH/WhatsApp-spammer
+cd WhatsApp-spammer
+python *.py
+reset
+python2 *.py
+reset
+bash *.sh
+reset
+""")
+	elif wa =="2" or wa =="02":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="3" or wa =="03":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="4" or wa =="04":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="5" or wa =="05":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="6" or wa =="06":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="7" or wa =="07":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="8" or wa =="08":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="9" or wa =="09":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="10" or wa =="10":
+		bahan()
+		os.system("""
+
+""")
+	elif wa =="99" or wa =="99":
+		kata4(f"{p}Anda Akan Kembali KeHide Menu !!")
+		hidemenu()
+
+def menudark():
+	bash("reset;clear")
+	kata3(f"""\r\r\r{p}
+  | D  | A  | R  | K  | F  | B
+   {b3}▒▒▒▒▒▒▐███████▌▒▒▒▒▒▒{q}
+   {b3}▒▒▒▒▒▒▐░▀░▀░▀░▌▒▒▒▒▒▒{q}
+   {b3}▒▒▒▒▒▒▐▄▄▄▄▄▄▄▌▒▒▒▒▒▒{q}
+   {b3}▄▀▀▀█▒▐░▀▀▄▀▀░▌▒█▀▀▀▄{q}
+   {b3}▌▌▌▌▐▒▄▌░▄▄▄░▐▄▒▌▐▐▐▐{q}
 {c}╔═══╗╔═══╗╔═══╗╔╗╔═╗╔═══╗╔══╗─
 {c}╚╗╔╗║║╔═╗║║╔═╗║║║║╔╝║╔══╝║╔╗║─
 {c}─║║║║║║─║║║╚═╝║║╚╝╝─║╚══╗║╚╝╚╗
@@ -452,8 +631,7 @@ def menudark():
 {p}[{i}+{p}]{c}Whatsapp      : 6283143565470		 {p}[{i}+{p}]{c}
 {p}[{i}+{p}]{c}Facebook      : Risky			 {p}[{i}+{p}]{c}
 {p}[{i}+{p}]{c}Grup WhatSapp : Attack In Form Cyber		 {p}[{i}+{p}]{c}
-{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]
-""")
+{p}[{i}+{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}+{p}]""")
 	kata3(f"""
 {p}[{i}++{p}]{c}––––––––––––––––––––––––––––––––––––––––––––––{p}[{i}++{p}]
 {p}[{i}0{i}1{p}]{k}⟩⟩⟩ {c}Dark Fb			[Version » 12.1]  {p}[{i}++{p}]
@@ -864,12 +1042,12 @@ Jika Ada Masalah Terhadap Script Silahkan Report KeAdmin
 
 def jam():
 	now = datetime.now()
-	mm = str(now.month)
-	dd = str(now.day)
-	yyyy = str(now.year)
-	hour = str(now.hour)
-	mi = str(now.minute)
-	ss = str(now.second)
+	mm = str(now.month)  #Bulan
+	dd = str(now.day)    #Tanggal
+	yyyy = str(now.year) #Tahun
+	hour = str(now.hour) #Jam
+	mi = str(now.minute) #Menit
+	ss = str(now.second) #Detik
 #Kata Goblok
 	kata3(f"""
 {m3}Mesin PengHitung Tanggal ~ Waktu
