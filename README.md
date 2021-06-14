@@ -1,2 +1,6 @@
-# Asw
-aswjdjdjdjdnsnns ddjdjsnsjdjsjsnnsnz bx d dbsbsnsns
+### INFORMASI
+
+**DI FOLDER INI ADALAH KUMPULAN FILE BY MR.RISKY**
+**jangan direocder !!**
+
+[WHATSAPP](https://wa.me/6283143565470)
