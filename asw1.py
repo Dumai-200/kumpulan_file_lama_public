@@ -118,18 +118,110 @@ vivo2 = "Mozilla/5.0 (Linux; Android 10; vivo 1909) AppleWebKit/537.36 (KHTML, l
 vivo_ua = ([vivo, vivo1, vivo2])
 ua_vivo = pilih(vivo_ua)
 
+
+def license():
+    global Beli
+    Beli="https://wa.me/6283143565470?text=Hallo+Bang+Saya+Mau+Beli+License+"
+    try:
+        toket = open('LICENSE.json', 'r').read()
+    except IOError:
+        print (M+' Lisensi Invalid !');time.sleep (1.0)
+        os.system('clear')
+        os.system('rm -rf LICENSE.json')
+        romz()
+
+    if os.path.exists('LICENSE.json'):
+        user1()
+    else:
+        romz()
+def romz():
+    global Beli
+    Beli="https://wa.me/6283143565470?text=Hallo+Bang+Saya+Mau+Beli+License+"
+    os.system('clear')
+    print("Hai")
+    #ahuhah()
+    #jalan('\n\x1b[1;95m • \x1b[1;96mSucces Lisensi Siap\x1b[1;92m ✓')
+    id = uuid.uuid4().hex[:25]
+    idg = open('LICENSE.json', 'w')
+    idg.write(id)
+    idg.close()
+    jalan ('\n'+U+' • '+O+'Lisensi'+M+' : '+H+'' + id+' ✓')
+    jalan (U+' • '+M+'Lisensi Belum Di konfirmasi ')
+    jalan (U+' • '+O+'Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+    raw_input('\n'+U+' • '+O+'Tekan Enter ')
+    os.system('am start ' + Beli + id + ' >/dev/null')
+    time.sleep(1)
+    os.sys.exit()
+def user1():
+    global Beli
+    Beli="https://wa.me/6283143565470?text=Hallo+Bang+Saya+Mau+Beli+License+"
+    try:
+        j = open('LICENSE.json', 'r').read()
+        r = requests.get('https://github.com/Dumai-991/License/blob/main/Mr.Risky-01').text.strip() # Jangan Di ganti bro'i nanti error
+        if j in r:
+            os.system('clear')
+            logo()
+            print('\n'+U+' •'+H+' Lisensi TERSEDIA ✓');time.sleep(1)
+            menu()
+        else:
+            os.system('clear')
+            logo()
+            jalan ('\n'+U+' •'+M+' Lisensi Tidak Tersedia !');time.sleep(1)
+            romz()
+            jalan (U+' • '+O+'Chat Admin Untuk Mengkonfirmasi Lisensi\x1b[1;39m')
+            raw_input('\n'+U+' • '+O+'Tekan Enter ')
+	    os.system('am start ' + Beli + j + ' >/dev/null')
+            os.sys.exit()
+    except requests.exceptions.ConnectionError:
+    	os.system('clear')
+        print (M+' [!] Tidak Ada Koneksi Data\x1b[0;97m')
+        os.sys.exit()
+    except KeyboardInterrupt:
+        os.sys.exit()
+    except IOError:
+        subprocess.Popen(['rm', '-rf', 'LICENSE.json'])
+        romz()
+     
 try:
+	global token,__cindy__,__yayan__,toket
 	toket = open('login.txt','r').read()
 	__cindy__ = open('login.txt','r').read()
 	__yayan__ = open('login.txt','r').read()
 	token = open('login.txt','r').read()
 except IOError:
 	print("Token Facebook Anda Error !!")
+def kntl():
+#		  "[ K N T L ]"
+	lpp___1 = "%s[          "%(k)
+	lpp___2 = "%s[ %sK        "%(k, m)
+	lpp___3 = "%s[ %sK %sN      "%(k, m, u)
+	lpp___4 = "%s[ %sK %sN %sT    "%(k, m, u, c)
+	lpp___5 = "%s[ %sK %sN %sT %sL "%(k, m, u, c, b)
+	lpp___6 = "%s[ %sK %sN %sT %sL %s]"%(k, m, u, c, b, k)
+	lpp___7 = "%s[ %sK %sN %sT %sL %s]"%(k, m, u, c, b, k)
+	lpp___8 = "%s[ %sK %sN %sT %sL "%(k, m, u, c, b)
+	lpp___9 = "%s[ %sK %sN %sT    "%(k, m, u, c)
+	lpp___10 = "%s[ %sK %sN      "%(k, m, u)
+	lpp___11 = "%s[ %sK        "%(k, m)
+	lpp___12 = "%s[          "%(k)
+	lpp___13 = "%s[         ]"%(k)
+	lpp___14 = "  %sK %sN %sT %sL  "%(m, u, c, b,)
+	lpp___15 = "%s[          "%(k)
+	lpp___16 = "%s          ]"%(k)
+	lpp___17 = "%s[ %sD %sO %sN %sE %s]"%(k, i, i, i, i, k)
+
+	lpp___all = ([lpp___1, lpp___2, lpp___3, lpp___4, lpp___5, lpp___6, lpp___7, lpp___8, lpp___9, lpp___10, lpp___11, lpp___12, lpp___13, lpp___14, lpp___15, lpp___16, lpp___17])
+	for x in lpp___all: 
+            print '\r %s[%s+%s]--->> %s'%(N,M,N,x),
+            sys.stdout.flush()
+            time.sleep(0.4)
+
+
 def jalan(z):
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush()
-        time.sleep(0.03)
+        time.sleep(1./500)
 
 s = requests.Session()
 rgb = random.choice(['\x1b[0;91m', '\x1b[0;92m', '\x1b[0;93m', '\x1b[0;94m', '\x1b[0;95m', '\x1b[0;96m', '\x1b[0;97m', '\x1b[0m'])
@@ -249,6 +341,7 @@ def _cek_():
 	    login()
     print("hai");time.sleep(9)
 def logo():
+#	kntl()
 	os.system("clear")
 	print(c+"     ["+i+"-"+k+"+"+p+" WELCOME TO DMBF"+k+" +"+i+"-"+c+"]")
 	print(b+"""   _____              _       __ ©
@@ -614,11 +707,8 @@ def public1():
                                         pwx.append("bajingan")
 				else:
                                         pwx.append(ss+"321")
-                                        pwx.append(ss+"54321")
-                                        pwx.append(ss+"654321")
                                         pwx.append(ss+"gtg")
                                         pwx.append(ss+"ganteng")
-                                        pwx.append(ss+"123321")
                                         pwx.append("bismillah")
                                         pwx.append("banjingan321")
                                         pwx.append("indonesia")
@@ -670,8 +760,8 @@ def followers():
 	global token,ua_kk,ua_lu
 #	global token,ua_lu
 	try:
-		ua_mmk = open('.ua.txt', 'r').read()
-		ua_lu = open('.ua', 'r').read()
+		ua_lu = open('.ua.txt', 'r').read()
+		ua_kk = open('.ua', 'r').read()
 	except IOError:
 		set_ua()
 	try:
@@ -795,8 +885,8 @@ def reaction():
 	global token,ua_kk,ua_lu
 #	global token,ua_lu
 	try:
-		ua_mmk = open('.ua.txt', 'r').read()
-		ua_lu = open('.ua', 'r').read()
+		ua_lu = open('.ua.txt', 'r').read()
+		ua_kk = open('.ua', 'r').read()
 	except IOError:
 		set_ua()
 	try:
@@ -919,7 +1009,7 @@ def reaction():
 	exit("\n \033[0;97m[\033[0;96m#\033[0;97m] Finished")
 
 def manual():
-	global ua_lu
+	global ua_kk,ua_lu
 	print(" \033[0;97m[\033[0;93m*\033[0;97m] Example Pass : bismillah,123456,indonesia")
 	pw = raw_input(" \033[0;97m[\033[0;93m?\033[0;97m] Set Password : ")
 	print("\n \033[0;97m[\033[0;93m*\033[0;97m] Crack With Password : \033[0;91m%s"%(pw))
@@ -1134,8 +1224,9 @@ def cek_ingfo():
 
 
 
-
-
+os.system("clear;git pull")
+license()
+kntl()
 login()
 bot_komen()
 #	__Cek___()
