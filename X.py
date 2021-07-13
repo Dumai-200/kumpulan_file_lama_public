@@ -514,8 +514,139 @@ def follow():
 		return pilihcrack(qq)
 	except Exception as e:
 		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
-
-
+def Khusus():
+	print(f"{war}Ketik ( menu ) Untuk Kembali KeMenu Utaman")
+	idt = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 01 : ")
+	idt2 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 02 : ")
+	idt3 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 03 : ")
+	idt4 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 04 : ")
+	idt5 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 05 : ")
+	jalan(k+"["+p+"•"+k+"]"+p+" Recommended For 1500 Dump ID")
+	max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	try:
+		toket=open("login.txt","r").read()
+	except IOError:
+		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
+		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
+		os.system("rm -rf login.txt")
+		logs()
+	try:
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+		except KeyError:
+			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((k+"\n[ "+p+"Back"+k+" ]"+p))
+			publik()
+		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit="+max_id+"&access_token="+toket)
+		id = []
+		z=json.loads(r.text)
+		qq = (op["first_name"]+".json").replace(" ","_")
+		ys = open(qq , "w")#.replace(" ","_")
+		for a in z["data"]:
+			id.append(a["id"]+"<=>"+a["name"])
+			ys.write(a["id"]+"<=>"+a["name"]+"\n")
+		ys.close()
+#		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+		try:
+			try:
+				jok = requests.get("https://graph.facebook.com/"+idt2+"?access_token="+toket)
+				op = json.loads(jok.text)
+				print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			except KeyError:
+				print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+				print((k+"\n[ "+p+"Back"+k+" ]"+p))
+				publik()
+				r=requests.get("https://graph.facebook.com/"+idt2+"/subscribers?limit="+max_id+"&access_token="+toket)
+			z=json.loads(r.text)
+			ys = open(qq , "a+")#.replace(" ","_")
+			for a in z["data"]:
+				id.append(a["id"]+"<=>"+a["name"])
+				ys.write(a["id"]+"<=>"+a["name"]+"\n")
+			ys.close()
+#			print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+			try:
+				try:
+					jok = requests.get("https://graph.facebook.com/"+idt3+"?access_token="+toket)
+					op = json.loads(jok.text)
+					print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+				except KeyError:
+					print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+					print((k+"\n[ "+p+"Back"+k+" ]"+p))
+					publik()
+					r=requests.get("https://graph.facebook.com/"+idt3+"/subscribers?limit="+max_id+"&access_token="+toket)
+				z=json.loads(r.text)
+				ys = open(qq , "a+")#.replace(" ","_")
+				for a in z["data"]:
+					id.append(a["id"]+"<=>"+a["name"])
+					ys.write(a["id"]+"<=>"+a["name"]+"\n")
+				ys.close()
+				print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+				try:
+					try:
+						jok = requests.get("https://graph.facebook.com/"+idt3+"?access_token="+toket)
+						op = json.loads(jok.text)
+						print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+					except KeyError:
+						print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+						print((k+"\n[ "+p+"Back"+k+" ]"+p))
+						publik()
+						r=requests.get("https://graph.facebook.com/"+idt3+"/subscribers?limit="+max_id+"&access_token="+toket)
+					z=json.loads(r.text)
+					ys = open(qq , "a+")#.replace(" ","_")
+					for a in z["data"]:
+						id.append(a["id"]+"<=>"+a["name"])
+						ys.write(a["id"]+"<=>"+a["name"]+"\n")
+					ys.close()
+					print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+					try:
+						try:
+							jok = requests.get("https://graph.facebook.com/"+idt3+"?access_token="+toket)
+							op = json.loads(jok.text)
+							print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+						except KeyError:
+							print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+							print((k+"\n[ "+p+"Back"+k+" ]"+p))
+							publik()
+							r=requests.get("https://graph.facebook.com/"+idt3+"/subscribers?limit="+max_id+"&access_token="+toket)
+						z=json.loads(r.text)
+						ys = open(qq , "a+")#.replace(" ","_")
+						for a in z["data"]:
+							id.append(a["id"]+"<=>"+a["name"])
+							ys.write(a["id"]+"<=>"+a["name"]+"\n")
+						ys.close()
+						print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+						try:
+							try:
+								jok = requests.get("https://graph.facebook.com/"+idt5+"?access_token="+toket)
+								op = json.loads(jok.text)
+								print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+							except KeyError:
+								print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+								print((k+"\n[ "+p+"Back"+k+" ]"+p))
+								publik()
+								r=requests.get("https://graph.facebook.com/"+idt5+"/subscribers?limit="+max_id+"&access_token="+toket)
+							z=json.loads(r.text)
+							ys = open(qq , "a+")#.replace(" ","_")
+							for a in z["data"]:
+								id.append(a["id"]+"<=>"+a["name"])
+								ys.write(a["id"]+"<=>"+a["name"]+"\n")
+							ys.close()
+							print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+							return pilihcrack(qq)
+						except Exception as e:
+							exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
+					except Exception as e:
+						exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
+				except Exception as e:
+					exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
+			except Exception as e:
+				exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
+		except Exception as e: 
+			exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
+	except Exception as e: 
+		exit(k+"["+p+"!"+k+"]"+p+" Error : "+e)
 def publik():
 	try:
 		toket=open("login.txt","r").read()

