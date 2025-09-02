@@ -1,6 +1,1 @@
-### INFORMASI
-
-**DI FOLDER INI ADALAH KUMPULAN FILE BY MR.RISKY**
-**jangan direocder !!**
-
-[WHATSAPP](https://wa.me/6283143565470)
+```file dari 2021 sebagai kenang-kenangan```
